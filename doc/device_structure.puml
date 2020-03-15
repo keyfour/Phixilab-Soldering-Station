@@ -1,9 +1,12 @@
 @startuml
 
-component "AC-DC Power Supply" as power
+component "AC-DC Power Supply" as power {
+    node "220V AC -> 24V DC"
+}
 component "DC-DC Converters" as converter
-component "AC-AC Converter" as aconverter
 component "Cooller Fan" as cooller
+component "Antenna" as antenna
+component "Power Button" as button
 
 database "Solder" as solder {
     component "Thermocouple Solder" as thcSolder
@@ -15,7 +18,7 @@ database "Heat Gun" as gun {
 
 node "Main Board" as main {
     component "LCD Display" as display
-    component "Microcontroller" as mcu
+    component "ESP32 Module " as mcu
 }
 
 node "Interfaces Board" as interfaces {
@@ -25,18 +28,18 @@ node "Interfaces Board" as interfaces {
         component "Encoder Input Main" as inputMain
     }
     cloud "220V AC" as hvdomain
-    cloud "24V AC"  as mvdomain
+    cloud "24V DC"  as mvdomain
 }
 
-power --> converter : 24/48VDC
+power --> converter : 24VDC
 power --> hvdomain : 220VAC
-power --> aconverter : 220VAC
-converter --> main : 3/5V
+power --> mvdomain : 24VDC
+converter --> main : 3.3V
 converter --> cooller : 12V
-aconverter --> mvdomain : 24VAC
-mvdomain -down-> solder : 24VAC   
+mvdomain -down-> solder : 24VDC   
 hvdomain -down-> gun : 220VAC
-main --> lvdomain : 3/5V
+main --> lvdomain : 3.3V
+mvdomain --> gun : 24V
 
 thcSolder ..> lvdomain : Temp
 thcHeat ..> lvdomain : Temp
@@ -44,14 +47,11 @@ thcHeat ..> lvdomain : Temp
 lvdomain ...> mcu : Signals
 mcu ..> display : UI
 
-lvdomain ..> hvdomain : Ctnrl
-lvdomain ..> mvdomain : Cntrl
+lvdomain ..> hvdomain : Ctnrl\n normal off
+lvdomain ..> mvdomain
 
-note right of [aconverter]
-  TODO: 
-   Find module
-   or design PCB
-end note
+mcu <..> antenna
 
+button .r.> power
 
 @enduml
