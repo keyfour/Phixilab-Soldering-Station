@@ -1,0 +1,57 @@
+@startuml
+
+component "AC-DC Power Supply" as power {
+    node "220V AC -> 24V DC"
+}
+component "DC-DC Converters" as converter
+component "Cooler Fan" as cooller
+component "Antenna" as antenna
+component "Power Button" as button
+
+database "Solder" as solder {
+    component "Thermocouple Solder" as thcSolder
+}
+
+database "Heat Gun" as gun {
+    component "Thermocouple Heat Gun" as thcHeat
+}
+
+node "Main Board" as main {
+    component "LCD Display" as display
+    component "ESP32 Module " as mcu
+}
+
+node "Interfaces Board" as interfaces {
+    cloud "3.3V DC" as lvdomain {
+        component "Encoder Input Temp Solder Iron" as inputTemp
+        component "Encoder Input Heat Gun" as inputHeat
+        component "Encoder Input Main" as inputMain
+    }
+    cloud "220V AC" as hvdomain
+    cloud "24V DC"  as mvdomain
+}
+
+power --> converter : 24VDC
+power --> hvdomain : 220VAC
+power --> mvdomain : 24VDC
+converter --> main : 3.3V
+converter --> cooller : 12V
+mvdomain -down-> solder : 24VDC   
+hvdomain -down-> gun : 220VAC
+main --> lvdomain : 3.3V
+mvdomain --> gun : 24V
+
+thcSolder ..> lvdomain : Temp
+thcHeat ..> lvdomain : Temp
+
+lvdomain ...> mcu : Signals
+mcu ..> display : UI
+
+lvdomain ..> hvdomain : Ctnrl\n normal off
+lvdomain ..> mvdomain
+
+mcu <..> antenna
+
+button .r.> power
+
+@enduml
