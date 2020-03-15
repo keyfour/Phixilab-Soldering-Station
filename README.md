@@ -2,5 +2,5 @@
 
 Hardware desing for soldering station
 
-* [Documentation](doc/README.nmd)
+* [Documentation](doc/README.md)
 
