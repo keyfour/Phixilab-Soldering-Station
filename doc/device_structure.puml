@@ -22,7 +22,7 @@ node "Main Board" as main {
 }
 
 node "Interfaces Board" as interfaces {
-    cloud "3/5V DC" as lvdomain {
+    cloud "3.3V DC" as lvdomain {
         component "Encoder Input Temp Solder Iron" as inputTemp
         component "Encoder Input Heat Gun" as inputHeat
         component "Encoder Input Main" as inputMain
