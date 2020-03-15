@@ -4,7 +4,7 @@ component "AC-DC Power Supply" as power {
     node "220V AC -> 24V DC"
 }
 component "DC-DC Converters" as converter
-component "Cooller Fan" as cooller
+component "Cooler Fan" as cooller
 component "Antenna" as antenna
 component "Power Button" as button
 
