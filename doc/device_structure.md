@@ -6,31 +6,31 @@
 
 Main power supply is powered with 220v and has output with 24v DC.
 Power button switch on and off main power source. There are two
-DC/DC step down converters:
+DC/DC step down converter:
 
-* 24v to 12v to run cooler fan,
-* 24v to 3.3v to power main board logic and interfaces.
+* 24v to 3.3v to power main PCB.
 
 220v power domain is used for heating element in heat gun.
 
-## Main Board
+## PCB
 
-Main board has two main modules on it:
+Main board has placed next components on it:
 
 * ESP32 module with connected external antenna.
 * LCD display module - screen with carrier board.
+* STM32 micro-controller to control heat gun and solder.
+* Encoders to control temperature and switch menu items.
+* Amplifier to transform thermocouple signals to MCU input.
 
-## Interface Board
+Every encoder has push button to on/off output or for enter command.
 
-Interface board has three power domains:
+### Power domains:
 
 * 3.3v is used for encoders and temperature feedback signals,
-* 2.4v is used for solder and fan in heat gun,
+* 24v is used for solder and fan in heat gun,
 * 220v is used for heating element in heat gun.
 
 24v and 220v outputs are normally off and can be switched on only with control signals.
-
-Every encoder has push button to on/off output or for enter command.
 
 ## Solder and Heat Gun
 
