@@ -3,7 +3,7 @@
 component "AC-DC Power Supply" as power {
     node "220V AC -> 24V DC"
 }
-component "DC-DC Converters" as converter
+component "DC-DC Converter" as converter
 component "Cooler Fan" as cooller
 component "Antenna" as antenna
 component "Power Button" as button
@@ -16,16 +16,15 @@ database "Heat Gun" as gun {
     component "Thermocouple Heat Gun" as thcHeat
 }
 
-node "Main Board" as main {
-    component "LCD Display" as display
-    component "ESP32 Module " as mcu
-}
-
-node "Interfaces Board" as interfaces {
+node "PCB" as interfaces {
     cloud "3.3V DC" as lvdomain {
+        component "LCD Display" as display
+        component "ESP32 Module " as mcu
         component "Encoder Input Temp Solder Iron" as inputTemp
         component "Encoder Input Heat Gun" as inputHeat
         component "Encoder Input Main" as inputMain
+        component "STM32 MCU" as driver
+        component "Amplifier" as amp
     }
     cloud "220V AC" as hvdomain
     cloud "24V DC"  as mvdomain
@@ -34,24 +33,29 @@ node "Interfaces Board" as interfaces {
 power --> converter : 24VDC
 power --> hvdomain : 220VAC
 power --> mvdomain : 24VDC
-converter --> main : 3.3V
-converter --> cooller : 12V
+converter --> lvdomain : 3.3V
+mvdomain --> cooller : 24V
 mvdomain -down-> solder : 24VDC   
 hvdomain -down-> gun : 220VAC
-main --> lvdomain : 3.3V
 mvdomain --> gun : 24V
 
-thcSolder ..> lvdomain : Temp
-thcHeat ..> lvdomain : Temp
+thcSolder ..> amp : Temperature
+thcHeat ..> amp : Temperature
+amp ..> driver : Temperature
 
-lvdomain ...> mcu : Signals
 mcu ..> display : UI
 
-lvdomain ..> hvdomain : Ctnrl\n normal off
-lvdomain ..> mvdomain
+inputMain ..> mcu : Menu Cntrl
+inputTemp ..> driver : Temperature
+inputHeat ..> driver : Temperature
 
-mcu <..> antenna
+mcu <...> driver : UART
 
-button .r.> power
+driver ..> hvdomain : Ctnrl\n normal off
+driver ..> mvdomain
+
+mcu <.left.> antenna
+
+button ..> power
 
 @enduml
