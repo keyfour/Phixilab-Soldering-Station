@@ -74,12 +74,12 @@ Wire Wire Line
 	2200 1350 2200 1200
 Wire Wire Line
 	2300 1350 2350 1350
-Text GLabel 2200 1550 3    50   Input ~ 0
+Text GLabel 2200 1550 3    50   BiDi ~ 0
 220_AC1
 Wire Wire Line
 	2200 1550 2200 1350
 Connection ~ 2200 1350
-Text GLabel 2300 1550 3    50   Input ~ 0
+Text GLabel 2300 1550 3    50   BiDi ~ 0
 220_AC2
 Wire Wire Line
 	2300 1200 2300 1350
@@ -152,4 +152,135 @@ Wire Notes Line
 	600  1950 600  700 
 Text Notes 650  800  0    50   ~ 0
 Voltage Inputs
+$Comp
+L gx16_conn:GX16-M5_connector J?
+U 1 1 5E88901D
+P 1750 5900
+F 0 "J?" H 1750 6245 50  0000 C CNN
+F 1 "Soldering Iron" H 1750 6154 50  0000 C CNN
+F 2 "" H 2400 5950 50  0001 C CNN
+F 3 "" H 2400 5950 50  0001 C CNN
+	1    1750 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L gx16_conn:GX16-M8_connector J?
+U 1 1 5E88925E
+P 1800 6950
+F 0 "J?" H 1800 7378 50  0000 C CNN
+F 1 "Hot Air Gun" H 1800 7287 50  0000 C CNN
+F 2 "" H 1800 6950 50  0001 C CNN
+F 3 "" H 1800 6950 50  0001 C CNN
+	1    1800 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5E8894D1
+P 1750 6200
+F 0 "#PWR?" H 1750 6000 50  0001 C CNN
+F 1 "GNDPWR" H 1754 6046 50  0000 C CNN
+F 2 "" H 1750 6150 50  0001 C CNN
+F 3 "" H 1750 6150 50  0001 C CNN
+	1    1750 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 6150 1750 6200
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5E889BEB
+P 1800 7250
+F 0 "#PWR?" H 1800 7050 50  0001 C CNN
+F 1 "GNDPWR" H 1804 7096 50  0000 C CNN
+F 2 "" H 1800 7200 50  0001 C CNN
+F 3 "" H 1800 7200 50  0001 C CNN
+	1    1800 7250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 7250 1800 7200
+Text GLabel 1350 6000 0    50   Input ~ 0
+IronHeatPos
+Wire Wire Line
+	1350 5800 1500 5800
+Text GLabel 1350 5800 0    50   Output ~ 0
+IronHeatNeg
+Wire Wire Line
+	1350 6000 1500 6000
+Text GLabel 2100 5800 2    50   Output ~ 0
+IronThermPos
+Wire Wire Line
+	2100 5800 2000 5800
+$Comp
+L power:GND #PWR?
+U 1 1 5E88AC54
+P 1000 7050
+F 0 "#PWR?" H 1000 6800 50  0001 C CNN
+F 1 "GND" H 1005 6877 50  0000 C CNN
+F 2 "" H 1000 7050 50  0001 C CNN
+F 3 "" H 1000 7050 50  0001 C CNN
+	1    1000 7050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 7050 1000 6950
+Wire Wire Line
+	1000 6950 1550 6950
+Text GLabel 1350 6850 0    50   Input ~ 0
+HotAirFan
+Wire Wire Line
+	1350 6850 1550 6850
+Text GLabel 1550 7050 0    50   Output ~ 0
+HotAirReed
+$Comp
+L power:GND #PWR?
+U 1 1 5E88B481
+P 2300 7050
+F 0 "#PWR?" H 2300 6800 50  0001 C CNN
+F 1 "GND" H 2305 6877 50  0000 C CNN
+F 2 "" H 2300 7050 50  0001 C CNN
+F 3 "" H 2300 7050 50  0001 C CNN
+	1    2300 7050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 7050 2300 7050
+$Comp
+L power:GND #PWR?
+U 1 1 5E88B6F3
+P 2450 6200
+F 0 "#PWR?" H 2450 5950 50  0001 C CNN
+F 1 "GND" H 2455 6027 50  0000 C CNN
+F 2 "" H 2450 6200 50  0001 C CNN
+F 3 "" H 2450 6200 50  0001 C CNN
+	1    2450 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 6200 2450 6000
+Wire Wire Line
+	2000 6000 2450 6000
+Text GLabel 2100 6950 2    50   Output ~ 0
+HotAirThermPos
+Wire Wire Line
+	2050 6950 2100 6950
+Text GLabel 2100 6850 2    50   BiDi ~ 0
+220V_Heater1
+Wire Wire Line
+	2050 6850 2100 6850
+Text GLabel 2100 6700 2    50   BiDi ~ 0
+220V_Heater2
+Wire Notes Line
+	700  5300 3000 5300
+Wire Notes Line
+	3000 5300 3000 7650
+Wire Notes Line
+	3000 7650 700  7650
+Wire Notes Line
+	700  7650 700  5300
+Text Notes 750  5400 0    50   ~ 0
+Handles Connectors\n
+Wire Wire Line
+	2100 6700 1800 6700
 $EndSCHEMATC
