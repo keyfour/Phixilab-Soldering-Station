@@ -1,0 +1,15 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP MOC3023S
+D Random Phase Opto-Triac, Vdrm 250V, Ift 15mA, SOP-6
+K Opto-Triac Opto Triac Random Phase
+F https://optoelectronics.liteon.com/upload/download/DS-70-99-0019/MOC302X%20series%20201606.pdf
+$ENDCMP
+#
+$CMP PC817S
+D DC Optocoupler, Vce 35V, CTR 50-300%, SOP-4
+K NPN DC Optocoupler
+F http://www.soselectronic.cz/a_info/resource/d/pc817.pdf
+$ENDCMP
+#
+#End Doc Library
