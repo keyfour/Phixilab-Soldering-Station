@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:pss_main_pcb-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -201,38 +202,34 @@ $EndComp
 Wire Wire Line
 	1800 7250 1800 7200
 Text GLabel 1350 6000 0    50   Input ~ 0
-IronHeatPos
+Iron_Heat_Pos
 Wire Wire Line
 	1350 5800 1500 5800
 Text GLabel 1350 5800 0    50   Output ~ 0
-IronHeatNeg
+Iron_Heat_Neg
 Wire Wire Line
 	1350 6000 1500 6000
 Text GLabel 2100 5800 2    50   Output ~ 0
-IronThermPos
+Iron_Therm_Pos
 Wire Wire Line
 	2100 5800 2000 5800
 $Comp
 L power:GND #PWR?
 U 1 1 5E88AC54
-P 1000 7050
-F 0 "#PWR?" H 1000 6800 50  0001 C CNN
-F 1 "GND" H 1005 6877 50  0000 C CNN
-F 2 "" H 1000 7050 50  0001 C CNN
-F 3 "" H 1000 7050 50  0001 C CNN
-	1    1000 7050
+P 800 7050
+F 0 "#PWR?" H 800 6800 50  0001 C CNN
+F 1 "GND" H 805 6877 50  0000 C CNN
+F 2 "" H 800 7050 50  0001 C CNN
+F 3 "" H 800 7050 50  0001 C CNN
+	1    800  7050
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1000 7050 1000 6950
-Wire Wire Line
-	1000 6950 1550 6950
 Text GLabel 1350 6850 0    50   Input ~ 0
-HotAirFan
+Hot_Air_Fan
 Wire Wire Line
 	1350 6850 1550 6850
 Text GLabel 1550 7050 0    50   Output ~ 0
-HotAirReed
+Hot_Air_Reed
 $Comp
 L power:GND #PWR?
 U 1 1 5E88B481
@@ -262,7 +259,7 @@ Wire Wire Line
 Wire Wire Line
 	2000 6000 2450 6000
 Text GLabel 2100 6950 2    50   Output ~ 0
-HotAirThermPos
+Hot_Air_Therm_Pos
 Wire Wire Line
 	2050 6950 2100 6950
 Text GLabel 2100 6850 2    50   BiDi ~ 0
@@ -283,4 +280,264 @@ Text Notes 750  5400 0    50   ~ 0
 Handles Connectors\n
 Wire Wire Line
 	2100 6700 1800 6700
+$Comp
+L Device:Rotary_Encoder_Switch SW?
+U 1 1 5E88D818
+P 1800 2800
+F 0 "SW?" H 1800 3167 50  0000 C CNN
+F 1 "Main Encoder Input" H 1800 3076 50  0000 C CNN
+F 2 "" H 1650 2960 50  0001 C CNN
+F 3 "~" H 1800 3060 50  0001 C CNN
+	1    1800 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Rotary_Encoder_Switch SW?
+U 1 1 5E88D8CE
+P 1800 3650
+F 0 "SW?" H 1800 4017 50  0000 C CNN
+F 1 "Soldering Iron Input" H 1800 3926 50  0000 C CNN
+F 2 "" H 1650 3810 50  0001 C CNN
+F 3 "~" H 1800 3910 50  0001 C CNN
+	1    1800 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Rotary_Encoder_Switch SW?
+U 1 1 5E88D923
+P 1800 4700
+F 0 "SW?" H 1800 5067 50  0000 C CNN
+F 1 "Hot Air Gun Input" H 1800 4976 50  0000 C CNN
+F 2 "" H 1650 4860 50  0001 C CNN
+F 3 "~" H 1800 4960 50  0001 C CNN
+	1    1800 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E88E25F
+P 800 2850
+F 0 "#PWR?" H 800 2600 50  0001 C CNN
+F 1 "GND" H 805 2677 50  0000 C CNN
+F 2 "" H 800 2850 50  0001 C CNN
+F 3 "" H 800 2850 50  0001 C CNN
+	1    800  2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E88E299
+P 800 3700
+F 0 "#PWR?" H 800 3450 50  0001 C CNN
+F 1 "GND" H 805 3527 50  0000 C CNN
+F 2 "" H 800 3700 50  0001 C CNN
+F 3 "" H 800 3700 50  0001 C CNN
+	1    800  3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E88E323
+P 800 4750
+F 0 "#PWR?" H 800 4500 50  0001 C CNN
+F 1 "GND" H 805 4577 50  0000 C CNN
+F 2 "" H 800 4750 50  0001 C CNN
+F 3 "" H 800 4750 50  0001 C CNN
+	1    800  4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 2800 800  2800
+Wire Wire Line
+	800  2800 800  2850
+Wire Wire Line
+	1500 3650 800  3650
+Wire Wire Line
+	800  3650 800  3700
+Wire Wire Line
+	1500 4700 800  4700
+Wire Wire Line
+	800  4700 800  4750
+Text GLabel 1450 2700 0    50   Output ~ 0
+Main_Enc_A
+Wire Wire Line
+	800  7050 800  6950
+Wire Wire Line
+	800  6950 1550 6950
+Text GLabel 1450 2900 0    50   Output ~ 0
+Main_Enc_B
+Wire Wire Line
+	1450 2700 1500 2700
+Wire Wire Line
+	1500 2900 1450 2900
+$Comp
+L power:GND #PWR?
+U 1 1 5E891294
+P 2350 2950
+F 0 "#PWR?" H 2350 2700 50  0001 C CNN
+F 1 "GND" H 2355 2777 50  0000 C CNN
+F 2 "" H 2350 2950 50  0001 C CNN
+F 3 "" H 2350 2950 50  0001 C CNN
+	1    2350 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 2900 2350 2900
+Wire Wire Line
+	2350 2900 2350 2950
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E891931
+P 2600 2300
+F 0 "#PWR?" H 2600 2150 50  0001 C CNN
+F 1 "+3.3V" H 2615 2473 50  0000 C CNN
+F 2 "" H 2600 2300 50  0001 C CNN
+F 3 "" H 2600 2300 50  0001 C CNN
+	1    2600 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E891A58
+P 2600 2500
+F 0 "R?" H 2670 2546 50  0000 L CNN
+F 1 "1k" H 2670 2455 50  0000 L CNN
+F 2 "" V 2530 2500 50  0001 C CNN
+F 3 "~" H 2600 2500 50  0001 C CNN
+	1    2600 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 2700 2600 2650
+Wire Wire Line
+	2600 2350 2600 2300
+$Comp
+L power:GND #PWR?
+U 1 1 5E893071
+P 2350 3800
+F 0 "#PWR?" H 2350 3550 50  0001 C CNN
+F 1 "GND" H 2355 3627 50  0000 C CNN
+F 2 "" H 2350 3800 50  0001 C CNN
+F 3 "" H 2350 3800 50  0001 C CNN
+	1    2350 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 3750 2350 3750
+Wire Wire Line
+	2350 3750 2350 3800
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E893079
+P 2600 3150
+F 0 "#PWR?" H 2600 3000 50  0001 C CNN
+F 1 "+3.3V" H 2615 3323 50  0000 C CNN
+F 2 "" H 2600 3150 50  0001 C CNN
+F 3 "" H 2600 3150 50  0001 C CNN
+	1    2600 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E89307F
+P 2600 3350
+F 0 "R?" H 2670 3396 50  0000 L CNN
+F 1 "1k" H 2670 3305 50  0000 L CNN
+F 2 "" V 2530 3350 50  0001 C CNN
+F 3 "~" H 2600 3350 50  0001 C CNN
+	1    2600 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 3550 2600 3500
+Wire Wire Line
+	2100 3550 2600 3550
+Wire Wire Line
+	2600 3200 2600 3150
+Wire Wire Line
+	2100 2700 2600 2700
+$Comp
+L power:GND #PWR?
+U 1 1 5E897388
+P 2350 4850
+F 0 "#PWR?" H 2350 4600 50  0001 C CNN
+F 1 "GND" H 2355 4677 50  0000 C CNN
+F 2 "" H 2350 4850 50  0001 C CNN
+F 3 "" H 2350 4850 50  0001 C CNN
+	1    2350 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 4800 2350 4800
+Wire Wire Line
+	2350 4800 2350 4850
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E897390
+P 2600 4200
+F 0 "#PWR?" H 2600 4050 50  0001 C CNN
+F 1 "+3.3V" H 2615 4373 50  0000 C CNN
+F 2 "" H 2600 4200 50  0001 C CNN
+F 3 "" H 2600 4200 50  0001 C CNN
+	1    2600 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E897396
+P 2600 4400
+F 0 "R?" H 2670 4446 50  0000 L CNN
+F 1 "1k" H 2670 4355 50  0000 L CNN
+F 2 "" V 2530 4400 50  0001 C CNN
+F 3 "~" H 2600 4400 50  0001 C CNN
+	1    2600 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 4600 2600 4550
+Wire Wire Line
+	2600 4250 2600 4200
+Wire Wire Line
+	2100 4600 2600 4600
+Text GLabel 1450 3550 0    50   Output ~ 0
+Sold_Enc_A
+Text GLabel 1450 3750 0    50   Output ~ 0
+Sold_Enc_B
+Text GLabel 1450 4600 0    50   Output ~ 0
+HotA_Enc_A
+Text GLabel 1450 4800 0    50   Output ~ 0
+HotA_Enc_B
+Wire Wire Line
+	1500 3550 1450 3550
+Wire Wire Line
+	1500 3750 1450 3750
+Wire Wire Line
+	1500 4600 1450 4600
+Wire Wire Line
+	1500 4800 1450 4800
+Text GLabel 2750 2700 2    50   Output ~ 0
+Main_Switch
+Wire Wire Line
+	2750 2700 2600 2700
+Connection ~ 2600 2700
+Text GLabel 2750 3550 2    50   Output ~ 0
+Sold_Switch
+Wire Wire Line
+	2600 3550 2750 3550
+Connection ~ 2600 3550
+Text GLabel 2750 4600 2    50   Output ~ 0
+HotA_Switch
+Wire Wire Line
+	2600 4600 2750 4600
+Connection ~ 2600 4600
+Wire Notes Line
+	600  2000 3300 2000
+Wire Notes Line
+	3300 2000 3300 5100
+Wire Notes Line
+	3300 5100 600  5100
+Wire Notes Line
+	600  5100 600  2000
+Text Notes 650  2100 0    50   ~ 0
+Encoders Inputs
 $EndSCHEMATC
