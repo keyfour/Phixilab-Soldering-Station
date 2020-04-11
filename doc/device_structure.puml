@@ -26,6 +26,7 @@ node "PCB" as interfaces {
         component "STM32 MCU" as driver
         component "Amplifier" as amp
     }
+    cloud "5V DC" as lvdomain2
     cloud "220V AC" as hvdomain
     cloud "24V DC"  as mvdomain
 }
@@ -34,6 +35,7 @@ power --> converter : 24VDC
 power --> hvdomain : 220VAC
 power --> mvdomain : 24VDC
 converter --> lvdomain : 3.3V
+converter --> lvdomain2 : 5V
 mvdomain --> cooller : 24V
 mvdomain -down-> solder : 24VDC   
 hvdomain -down-> gun : 220VAC
@@ -51,8 +53,11 @@ inputHeat ..> driver : Temperature
 
 mcu <...> driver : UART
 
-driver ..> hvdomain : Ctnrl\n normal off
+driver ..> hvdomain : 5V Ctnrl\n normal off
 driver ..> mvdomain
+
+lvdomain2 ..> hvdomain
+lvdomain2 ..>mvdomain
 
 mcu <.left.> antenna
 
