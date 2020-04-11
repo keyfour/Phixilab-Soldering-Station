@@ -3,7 +3,6 @@
 component "AC-DC Power Supply" as power {
     node "220V AC -> 24V DC"
 }
-component "DC-DC Converter" as converter
 component "Cooler Fan" as cooller
 component "Antenna" as antenna
 component "Power Button" as button
@@ -17,6 +16,9 @@ database "Heat Gun" as gun {
 }
 
 node "PCB" as interfaces {
+    component "DC-DC Converter 3.3v" as converter3
+    component "DC-DC Converter 5v" as converter5
+
     cloud "3.3V DC" as lvdomain {
         component "LCD Display" as display
         component "ESP32 Module " as mcu
@@ -31,11 +33,12 @@ node "PCB" as interfaces {
     cloud "24V DC"  as mvdomain
 }
 
-power --> converter : 24VDC
+power --> converter3 : 24VDC
+power --> converter5 : 24VDC
 power --> hvdomain : 220VAC
 power --> mvdomain : 24VDC
-converter --> lvdomain : 3.3V
-converter --> lvdomain2 : 5V
+converter3 --> lvdomain : 3.3V
+converter5 --> lvdomain2 : 5V
 mvdomain --> cooller : 24V
 mvdomain -down-> solder : 24VDC   
 hvdomain -down-> gun : 220VAC
