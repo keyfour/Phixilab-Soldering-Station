@@ -497,7 +497,7 @@ Wire Notes Line
 	600  5100 600  2000
 Text Notes 650  2100 0    50   ~ 0
 Encoders Inputs
-Text GLabel 7500 1850 0    50   Input ~ 0
+Text GLabel 7500 1850 0    50   Output ~ 0
 Sold_PWM
 $Comp
 L Device:R R?
@@ -1033,4 +1033,175 @@ Wire Wire Line
 Connection ~ 3750 1850
 Wire Wire Line
 	9950 1500 10550 1500
+$Comp
+L power:+5V #PWR?
+U 1 1 5E941771
+P 4050 3700
+F 0 "#PWR?" H 4050 3550 50  0001 C CNN
+F 1 "+5V" H 4065 3873 50  0000 C CNN
+F 2 "" H 4050 3700 50  0001 C CNN
+F 3 "" H 4050 3700 50  0001 C CNN
+	1    4050 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E941873
+P 4050 4000
+F 0 "R?" H 4120 4046 50  0000 L CNN
+F 1 "R" H 4120 3955 50  0000 L CNN
+F 2 "" V 3980 4000 50  0001 C CNN
+F 3 "~" H 4050 4000 50  0001 C CNN
+	1    4050 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Opto_custom:MOC3023S U?
+U 1 1 5E941A1A
+P 4600 4300
+F 0 "U?" H 4600 4625 50  0000 C CNN
+F 1 "MOC3023S" H 4600 4534 50  0000 C CNN
+F 2 "" H 4400 4100 50  0001 L CIN
+F 3 "https://optoelectronics.liteon.com/upload/download/DS-70-99-0019/MOC302X%20series%20201606.pdf" H 4575 4300 50  0001 L CNN
+	1    4600 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Triac_custom:BT139B-800 Q?
+U 1 1 5E9467AF
+P 6350 4300
+F 0 "Q?" H 6479 4346 50  0000 L CNN
+F 1 "BT139B-800" H 6479 4255 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:SOT-404" H 6550 4225 50  0001 L CIN
+F 3 "https://www.ariat-tech.com/datasheet/42/SBR545D1-13.pdf" H 6350 4300 50  0001 L CNN
+	1    6350 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E946913
+P 4050 4500
+F 0 "#PWR?" H 4050 4250 50  0001 C CNN
+F 1 "GND" H 4055 4327 50  0000 C CNN
+F 2 "" H 4050 4500 50  0001 C CNN
+F 3 "" H 4050 4500 50  0001 C CNN
+	1    4050 4500
+	1    0    0    -1  
+$EndComp
+Text GLabel 4750 5200 0    50   BiDi ~ 0
+220_AC1
+Text GLabel 6850 4800 0    50   BiDi ~ 0
+220_AC2
+$Comp
+L Device:R R?
+U 1 1 5E94AD12
+P 5350 4600
+F 0 "R?" H 5420 4646 50  0000 L CNN
+F 1 "1k" H 5420 4555 50  0000 L CNN
+F 2 "" V 5280 4600 50  0001 C CNN
+F 3 "~" H 5350 4600 50  0001 C CNN
+	1    5350 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E94B248
+P 5850 4650
+F 0 "R?" H 5920 4696 50  0000 L CNN
+F 1 "51 1W" H 5920 4605 50  0000 L CNN
+F 2 "" V 5780 4650 50  0001 C CNN
+F 3 "~" H 5850 4650 50  0001 C CNN
+	1    5850 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E94B2DF
+P 5350 4150
+F 0 "R?" V 5557 4150 50  0000 C CNN
+F 1 "1k" V 5466 4150 50  0000 C CNN
+F 2 "" V 5280 4150 50  0001 C CNN
+F 3 "~" H 5350 4150 50  0001 C CNN
+	1    5350 4150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5E94B396
+P 5850 5000
+F 0 "C?" H 5965 5046 50  0000 L CNN
+F 1 "104 Y" H 5965 4955 50  0000 L CNN
+F 2 "" H 5888 4850 50  0001 C CNN
+F 3 "~" H 5850 5000 50  0001 C CNN
+	1    5850 5000
+	1    0    0    -1  
+$EndComp
+Text GLabel 7050 4150 2    50   BiDi ~ 0
+220V_Heater1
+Text GLabel 7250 4800 2    50   BiDi ~ 0
+220V_Heater2
+Wire Wire Line
+	4900 4400 5350 4400
+Wire Wire Line
+	4900 4200 5050 4200
+Wire Wire Line
+	5050 4200 5050 4150
+Wire Wire Line
+	5050 4150 5200 4150
+Wire Wire Line
+	5500 4150 5850 4150
+Wire Wire Line
+	5350 4450 5350 4400
+Connection ~ 5350 4400
+Wire Wire Line
+	5350 4400 6200 4400
+Wire Wire Line
+	4750 5200 5350 5200
+Wire Wire Line
+	5350 5200 5850 5200
+Connection ~ 5350 5200
+Wire Wire Line
+	5850 5200 5850 5150
+Connection ~ 5850 5200
+Wire Wire Line
+	5850 5200 6350 5200
+Wire Wire Line
+	5350 4750 5350 5200
+Wire Wire Line
+	5850 4850 5850 4800
+Wire Wire Line
+	5850 4500 5850 4150
+Connection ~ 5850 4150
+Wire Wire Line
+	5850 4150 6350 4150
+Wire Wire Line
+	6350 4450 6350 5200
+Wire Wire Line
+	6350 4150 7050 4150
+Connection ~ 6350 4150
+Wire Wire Line
+	4050 3850 4050 3700
+Wire Wire Line
+	4300 4200 4050 4200
+Wire Wire Line
+	4050 4200 4050 4150
+Wire Wire Line
+	4050 4500 4050 4400
+Wire Wire Line
+	4050 4400 4300 4400
+Text GLabel 3950 4200 0    50   Output ~ 0
+Heater_PWM
+Wire Wire Line
+	4050 4200 3950 4200
+Connection ~ 4050 4200
+Wire Wire Line
+	6850 4800 7250 4800
+Wire Notes Line
+	3400 3350 7900 3350
+Wire Notes Line
+	7900 3350 7900 5350
+Wire Notes Line
+	3400 5350 7900 5350
+Wire Notes Line
+	3400 3350 3400 5350
 $EndSCHEMATC

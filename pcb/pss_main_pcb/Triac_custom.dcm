@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP BT139B-800
+D 16A RMS, 800V Off-State Voltage, Triac, SOT404
+K Triac
+F https://www.ariat-tech.com/datasheet/42/SBR545D1-13.pdf
+$ENDCMP
+#
+#End Doc Library
