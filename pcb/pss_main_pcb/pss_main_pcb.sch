@@ -5,7 +5,7 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "Phixilab Soldering Station Analog "
+Title "Phixilab Soldering Station"
 Date "2020-04-04"
 Rev ""
 Comp ""
