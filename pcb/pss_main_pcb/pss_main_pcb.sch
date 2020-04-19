@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 4
+Sheet 1 5
 Title "Phixilab Soldering Station"
 Date "2020-04-04"
 Rev ""
@@ -48,4 +48,10 @@ Wire Notes Line
 	2550 1100 9850 1100
 Text Notes 5950 1450 0    129  ~ 0
 Analog
+$Sheet
+S 4150 4850 1600 1050
+U 5EE5A305
+F0 "SheetSTM32" 50
+F1 "pss_stm32.sch" 50
+$EndSheet
 $EndSCHEMATC
