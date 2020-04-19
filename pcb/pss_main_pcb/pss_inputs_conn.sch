@@ -5,12 +5,12 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 4
-Title ""
-Date ""
+Title "Phixilab Soldering Station"
+Date "2020-04-19"
 Rev ""
 Comp ""
 Comment1 ""
-Comment2 ""
+Comment2 "Alex Karpov"
 Comment3 ""
 Comment4 ""
 $EndDescr
