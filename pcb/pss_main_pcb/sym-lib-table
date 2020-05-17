@@ -3,4 +3,5 @@
   (lib (name Transistors_custom)(type Legacy)(uri /home/keyfour/projects/phixilab-soldering-station/pcb/pss_main_pcb/Transistors_custom.lib)(options "")(descr ""))
   (lib (name Opto_custom)(type Legacy)(uri /home/keyfour/projects/phixilab-soldering-station/pcb/pss_main_pcb/Opto_custom.lib)(options "")(descr ""))
   (lib (name Triac_custom)(type Legacy)(uri /home/keyfour/projects/phixilab-soldering-station/pcb/pss_main_pcb/Triac_custom.lib)(options "")(descr ""))
+  (lib (name display)(type Legacy)(uri ${KIPRJMOD}/display.lib)(options "")(descr ""))
 )

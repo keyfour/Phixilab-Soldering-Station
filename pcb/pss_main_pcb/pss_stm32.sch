@@ -306,9 +306,9 @@ F 3 "~" H 2500 6200 50  0001 C CNN
 	1    2500 6200
 	0    -1   -1   0   
 $EndComp
-Text GLabel 1450 6000 0    50   Output ~ 0
+Text GLabel 1450 6000 0    50   Input ~ 0
 Sold_Enc_A
-Text GLabel 1450 6200 0    50   Output ~ 0
+Text GLabel 1450 6200 0    50   Input ~ 0
 Sold_Enc_B
 Wire Wire Line
 	1500 6000 1450 6000
@@ -496,9 +496,9 @@ F 3 "~" H 2450 7400 50  0001 C CNN
 	1    2450 7400
 	0    -1   -1   0   
 $EndComp
-Text GLabel 1400 7200 0    50   Output ~ 0
+Text GLabel 1400 7200 0    50   Input ~ 0
 HotA_Enc_A
-Text GLabel 1400 7400 0    50   Output ~ 0
+Text GLabel 1400 7400 0    50   Input ~ 0
 HotA_Enc_B
 Wire Wire Line
 	1450 7200 1400 7200
@@ -533,7 +533,7 @@ Sold_Switch
 Wire Wire Line
 	6300 4050 6550 4050
 NoConn ~ 6300 3950
-Text GLabel 6550 4150 2    50   Input ~ 0
+Text GLabel 6550 4150 2    50   Output ~ 0
 Sold_Enc_A
 Text GLabel 6550 4250 2    50   Input ~ 0
 Sold_Enc_B
@@ -593,7 +593,7 @@ Wire Wire Line
 	6550 4650 6300 4650
 Text GLabel 6550 4950 2    50   Input ~ 0
 STM_SWCLK
-Text GLabel 6550 4850 2    50   Input ~ 0
+Text GLabel 6550 4850 2    50   BiDi ~ 0
 STM_SWDIO
 Wire Wire Line
 	6300 4850 6550 4850
@@ -750,4 +750,36 @@ Wire Wire Line
 	8600 2600 9000 2600
 Wire Wire Line
 	9300 2600 9750 2600
+$Comp
+L Connector:Conn_01x03_Female J?
+U 1 1 5EC66EF4
+P 9500 3750
+F 0 "J?" V 9438 3562 50  0000 R CNN
+F 1 "STM32_Prog" V 9347 3562 50  0000 R CNN
+F 2 "" H 9500 3750 50  0001 C CNN
+F 3 "~" H 9500 3750 50  0001 C CNN
+	1    9500 3750
+	0    -1   -1   0   
+$EndComp
+Text GLabel 9500 4150 3    50   BiDi ~ 0
+STM_SWDIO
+Wire Wire Line
+	9500 4150 9500 3950
+Text GLabel 9600 4150 3    50   Output ~ 0
+STM_SWCLK
+Wire Wire Line
+	9600 4150 9600 3950
+$Comp
+L power:GND #PWR?
+U 1 1 5EC6DA9A
+P 9400 4600
+F 0 "#PWR?" H 9400 4350 50  0001 C CNN
+F 1 "GND" H 9405 4427 50  0000 C CNN
+F 2 "" H 9400 4600 50  0001 C CNN
+F 3 "" H 9400 4600 50  0001 C CNN
+	1    9400 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 3950 9400 4600
 $EndSCHEMATC

@@ -51,4 +51,8 @@ U 5ED3D5DF
 F0 "SheetESP32" 50
 F1 "pss_esp32.sch" 50
 $EndSheet
+Text Notes 3150 4600 0    50   ~ 0
+- STM32 MCU\n
+Text Notes 6300 4700 0    50   ~ 0
+- ESP32 Wireless MCU\n- LCD Display\n
 $EndSCHEMATC
