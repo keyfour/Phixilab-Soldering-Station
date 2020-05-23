@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name gx_connectors)(type KiCad)(uri ${KIPRJMOD}/gx_connectors.pretty)(options "")(descr ""))
+)
