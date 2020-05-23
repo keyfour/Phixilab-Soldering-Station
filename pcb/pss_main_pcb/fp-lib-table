@@ -1,3 +1,5 @@
 (fp_lib_table
   (lib (name gx_connectors)(type KiCad)(uri ${KIPRJMOD}/gx_connectors.pretty)(options "")(descr ""))
+  (lib (name moc3023s)(type KiCad)(uri ${KIPRJMOD}/moc3023s.pretty)(options "")(descr ""))
+  (lib (name bt139b)(type KiCad)(uri ${KIPRJMOD}/bt139b.pretty)(options "")(descr ""))
 )

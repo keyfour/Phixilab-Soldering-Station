@@ -40,32 +40,6 @@ F 3 "~" H 3400 1400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Opto_custom:MOC3023S U?
-U 1 1 5EE25046
-P 3950 1700
-AR Path="/5EE25046" Ref="U?"  Part="1" 
-AR Path="/5EE1CBE0/5EE25046" Ref="U3"  Part="1" 
-F 0 "U3" H 3950 2025 50  0000 C CNN
-F 1 "MOC3023S" H 3950 1934 50  0000 C CNN
-F 2 "" H 3750 1500 50  0001 L CIN
-F 3 "https://optoelectronics.liteon.com/upload/download/DS-70-99-0019/MOC302X%20series%20201606.pdf" H 3925 1700 50  0001 L CNN
-	1    3950 1700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Triac_custom:BT139B-800 Q?
-U 1 1 5EE2504D
-P 5700 1700
-AR Path="/5EE2504D" Ref="Q?"  Part="1" 
-AR Path="/5EE1CBE0/5EE2504D" Ref="Q6"  Part="1" 
-F 0 "Q6" H 5829 1746 50  0000 L CNN
-F 1 "BT139B-800" H 5829 1655 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:SOT-404" H 5900 1625 50  0001 L CIN
-F 3 "https://www.ariat-tech.com/datasheet/42/SBR545D1-13.pdf" H 5700 1700 50  0001 L CNN
-	1    5700 1700
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR?
 U 1 1 5EE25054
 P 3400 1900
@@ -1152,7 +1126,7 @@ AR Path="/5EE027BC/5EB844E7" Ref="J?"  Part="1"
 AR Path="/5EE1CBE0/5EB844E7" Ref="J3"  Part="1" 
 F 0 "J3" H 1750 5828 50  0000 C CNN
 F 1 "Hot Air Gun" H 1750 5737 50  0000 C CNN
-F 2 "" H 1750 5400 50  0001 C CNN
+F 2 "gx_connectors:GX16-8" H 1750 5400 50  0001 C CNN
 F 3 "" H 1750 5400 50  0001 C CNN
 	1    1750 5400
 	1    0    0    -1  
@@ -1311,4 +1285,30 @@ F 3 "~" H 1200 6750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1200 6950 1200 6750
+$Comp
+L Triac_custom:BT139B-800 Q?
+U 1 1 5EE2504D
+P 5700 1700
+AR Path="/5EE2504D" Ref="Q?"  Part="1" 
+AR Path="/5EE1CBE0/5EE2504D" Ref="Q6"  Part="1" 
+F 0 "Q6" H 5829 1746 50  0000 L CNN
+F 1 "BT139B-800" H 5829 1655 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:SOT-404" H 5900 1625 50  0001 L CIN
+F 3 "https://www.ariat-tech.com/datasheet/42/SBR545D1-13.pdf" H 5700 1700 50  0001 L CNN
+	1    5700 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Opto_custom:MOC3023S U?
+U 1 1 5EE25046
+P 3950 1700
+AR Path="/5EE25046" Ref="U?"  Part="1" 
+AR Path="/5EE1CBE0/5EE25046" Ref="U3"  Part="1" 
+F 0 "U3" H 3950 2025 50  0000 C CNN
+F 1 "MOC3023S" H 3950 1934 50  0000 C CNN
+F 2 "moc3023s:SOT254P1016X460-6N" H 3750 1500 50  0001 L CIN
+F 3 "https://optoelectronics.liteon.com/upload/download/DS-70-99-0019/MOC302X%20series%20201606.pdf" H 3925 1700 50  0001 L CNN
+	1    3950 1700
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
