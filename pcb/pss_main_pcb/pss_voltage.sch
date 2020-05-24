@@ -34,7 +34,7 @@ AR Path="/5EDC5C73" Ref="J?"  Part="1"
 AR Path="/5ED9AD16/5EDC5C73" Ref="J2"  Part="1" 
 F 0 "J2" V 2710 4140 50  0000 L CNN
 F 1 "220V AC Input" V 2550 3850 50  0000 L CNN
-F 2 "" H 2650 4100 50  0001 C CNN
+F 2 "Connector_AMASS:AMASS_XT60-F_1x02_P7.20mm_Vertical" H 2650 4100 50  0001 C CNN
 F 3 "~" H 2650 4100 50  0001 C CNN
 	1    2650 4100
 	0    1    1    0   
@@ -51,7 +51,7 @@ AR Path="/5EDC5C90" Ref="J?"  Part="1"
 AR Path="/5ED9AD16/5EDC5C90" Ref="J1"  Part="1" 
 F 0 "J1" V 2710 2290 50  0000 L CNN
 F 1 "24V DC Input" V 2550 2000 50  0000 L CNN
-F 2 "" H 2650 2250 50  0001 C CNN
+F 2 "Connector_AMASS:AMASS_XT60-F_1x02_P7.20mm_Vertical" H 2650 2250 50  0001 C CNN
 F 3 "~" H 2650 2250 50  0001 C CNN
 	1    2650 2250
 	0    1    1    0   
@@ -113,7 +113,7 @@ AR Path="/5EDDCED1" Ref="C?"  Part="1"
 AR Path="/5ED9AD16/5EDDCED1" Ref="C1"  Part="1" 
 F 0 "C1" H 5850 2700 50  0000 L CNN
 F 1 "470u 50V" H 5500 2600 50  0000 L CNN
-F 2 "" H 6100 2650 50  0001 C CNN
+F 2 "Capacitor_SMD:CP_Elec_16x17.5" H 6100 2650 50  0001 C CNN
 F 3 "~" H 6100 2650 50  0001 C CNN
 	1    6100 2650
 	1    0    0    -1  
@@ -155,7 +155,7 @@ AR Path="/5EDDCEE8" Ref="L?"  Part="1"
 AR Path="/5ED9AD16/5EDDCEE8" Ref="L1"  Part="1" 
 F 0 "L1" V 8050 2600 50  0000 C CNN
 F 1 "68u" V 8200 2600 50  0000 C CNN
-F 2 "" H 8100 2600 50  0001 C CNN
+F 2 "Inductor_SMD:L_12x12mm_H8mm" H 8100 2600 50  0001 C CNN
 F 3 "~" H 8100 2600 50  0001 C CNN
 	1    8100 2600
 	0    1    1    0   
@@ -168,7 +168,7 @@ AR Path="/5EDDCEEF" Ref="D?"  Part="1"
 AR Path="/5ED9AD16/5EDDCEEF" Ref="D1"  Part="1" 
 F 0 "D1" V 7654 2929 50  0000 L CNN
 F 1 "SS34" V 7745 2929 50  0000 L CNN
-F 2 "" H 7700 2850 50  0001 C CNN
+F 2 "Diode_SMD:D_SMA_Handsoldering" H 7700 2850 50  0001 C CNN
 F 3 "http://www.vishay.com/docs/88751/ss32.pdf" H 7700 2850 50  0001 C CNN
 	1    7700 2850
 	0    1    1    0   
@@ -181,7 +181,7 @@ AR Path="/5EDDCEF6" Ref="C?"  Part="1"
 AR Path="/5ED9AD16/5EDDCEF6" Ref="C3"  Part="1" 
 F 0 "C3" H 8765 2896 50  0000 L CNN
 F 1 "270u 10V" H 8765 2805 50  0000 L CNN
-F 2 "" H 8650 2850 50  0001 C CNN
+F 2 "Capacitor_SMD:CP_Elec_8x10.5" H 8650 2850 50  0001 C CNN
 F 3 "~" H 8650 2850 50  0001 C CNN
 	1    8650 2850
 	1    0    0    -1  
@@ -258,7 +258,7 @@ AR Path="/5EDDCF22" Ref="R?"  Part="1"
 AR Path="/5ED9AD16/5EDDCF22" Ref="R1"  Part="1" 
 F 0 "R1" V 6293 3100 50  0000 C CNN
 F 1 "1k" V 6384 3100 50  0000 C CNN
-F 2 "" V 6430 3100 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 6430 3100 50  0001 C CNN
 F 3 "~" H 6500 3100 50  0001 C CNN
 	1    6500 3100
 	0    1    1    0   
@@ -310,7 +310,7 @@ AR Path="/5EDEFDBB" Ref="C?"  Part="1"
 AR Path="/5ED9AD16/5EDEFDBB" Ref="C2"  Part="1" 
 F 0 "C2" H 5850 4600 50  0000 L CNN
 F 1 "470u 50V" H 5500 4500 50  0000 L CNN
-F 2 "" H 6100 4550 50  0001 C CNN
+F 2 "Capacitor_SMD:CP_Elec_16x17.5" H 6100 4550 50  0001 C CNN
 F 3 "~" H 6100 4550 50  0001 C CNN
 	1    6100 4550
 	1    0    0    -1  
@@ -346,7 +346,7 @@ AR Path="/5EDEFDCF" Ref="L?"  Part="1"
 AR Path="/5ED9AD16/5EDEFDCF" Ref="L2"  Part="1" 
 F 0 "L2" V 8050 4500 50  0000 C CNN
 F 1 "47u" V 8200 4500 50  0000 C CNN
-F 2 "" H 8100 4500 50  0001 C CNN
+F 2 "Inductor_SMD:L_12x12mm_H8mm" H 8100 4500 50  0001 C CNN
 F 3 "~" H 8100 4500 50  0001 C CNN
 	1    8100 4500
 	0    1    1    0   
@@ -359,7 +359,7 @@ AR Path="/5EDEFDD6" Ref="D?"  Part="1"
 AR Path="/5ED9AD16/5EDEFDD6" Ref="D2"  Part="1" 
 F 0 "D2" V 7654 4829 50  0000 L CNN
 F 1 "SS34" V 7745 4829 50  0000 L CNN
-F 2 "" H 7700 4750 50  0001 C CNN
+F 2 "Diode_SMD:D_SMA_Handsoldering" H 7700 4750 50  0001 C CNN
 F 3 "http://www.vishay.com/docs/88751/ss32.pdf" H 7700 4750 50  0001 C CNN
 	1    7700 4750
 	0    1    1    0   
@@ -372,7 +372,7 @@ AR Path="/5EDEFDDD" Ref="C?"  Part="1"
 AR Path="/5ED9AD16/5EDEFDDD" Ref="C4"  Part="1" 
 F 0 "C4" H 8765 4796 50  0000 L CNN
 F 1 "330u 10V" H 8765 4705 50  0000 L CNN
-F 2 "" H 8650 4750 50  0001 C CNN
+F 2 "Capacitor_SMD:CP_Elec_8x10.5" H 8650 4750 50  0001 C CNN
 F 3 "~" H 8650 4750 50  0001 C CNN
 	1    8650 4750
 	1    0    0    -1  
