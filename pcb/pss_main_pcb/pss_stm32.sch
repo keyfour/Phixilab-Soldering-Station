@@ -257,7 +257,7 @@ AR Path="/5EE027BC/5EB3C4E2" Ref="SW?"  Part="1"
 AR Path="/5EE5A305/5EB3C4E2" Ref="SW2"  Part="1" 
 F 0 "SW2" H 1800 6467 50  0000 C CNN
 F 1 "Soldering Iron Input" H 1800 6376 50  0000 C CNN
-F 2 "" H 1650 6260 50  0001 C CNN
+F 2 "Rotary_Encoder:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm" H 1650 6260 50  0001 C CNN
 F 3 "~" H 1800 6360 50  0001 C CNN
 	1    1800 6100
 	1    0    0    -1  
@@ -330,7 +330,7 @@ U 1 1 5EB5F692
 P 3700 1900
 F 0 "JP1" H 3700 2139 50  0000 C CNN
 F 1 "Jumper_NC_Dual" H 3700 2048 50  0000 C CNN
-F 2 "" H 3700 1900 50  0001 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Open_Pad1.0x1.5mm" H 3700 1900 50  0001 C CNN
 F 3 "~" H 3700 1900 50  0001 C CNN
 	1    3700 1900
 	1    0    0    -1  
@@ -447,7 +447,7 @@ AR Path="/5EE027BC/5EC370A1" Ref="SW?"  Part="1"
 AR Path="/5EE5A305/5EC370A1" Ref="SW1"  Part="1" 
 F 0 "SW1" H 1750 7667 50  0000 C CNN
 F 1 "Hot Air Gun Input" H 1750 7576 50  0000 C CNN
-F 2 "" H 1600 7460 50  0001 C CNN
+F 2 "Rotary_Encoder:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm" H 1600 7460 50  0001 C CNN
 F 3 "~" H 1750 7560 50  0001 C CNN
 	1    1750 7300
 	1    0    0    -1  
@@ -754,7 +754,7 @@ U 1 1 5EC66EF4
 P 9500 3750
 F 0 "J5" V 9438 3562 50  0000 R CNN
 F 1 "STM32_Prog" V 9347 3562 50  0000 R CNN
-F 2 "" H 9500 3750 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 9500 3750 50  0001 C CNN
 F 3 "~" H 9500 3750 50  0001 C CNN
 	1    9500 3750
 	0    -1   -1   0   
