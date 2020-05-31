@@ -1229,7 +1229,7 @@ AR Path="/5EE027BC/5EB844E1" Ref="J?"  Part="1"
 AR Path="/5EE1CBE0/5EB844E1" Ref="J4"  Part="1" 
 F 0 "J4" H 1850 3195 50  0000 C CNN
 F 1 "Soldering Iron" H 1850 3104 50  0000 C CNN
-F 2 "" H 2500 2900 50  0001 C CNN
+F 2 "gx_connectors:GX16-5" H 2500 2900 50  0001 C CNN
 F 3 "" H 2500 2900 50  0001 C CNN
 	1    1850 2850
 	1    0    0    -1  
