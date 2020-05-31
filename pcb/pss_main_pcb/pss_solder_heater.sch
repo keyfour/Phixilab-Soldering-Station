@@ -1242,7 +1242,7 @@ AR Path="/5EE2504D" Ref="Q?"  Part="1"
 AR Path="/5EE1CBE0/5EE2504D" Ref="Q6"  Part="1" 
 F 0 "Q6" H 5829 1746 50  0000 L CNN
 F 1 "BT139B-800" H 5829 1655 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:SOT-404" H 5900 1625 50  0001 L CIN
+F 2 "bt139b:D2PAK-3" H 5900 1625 50  0001 L CIN
 F 3 "https://www.ariat-tech.com/datasheet/42/SBR545D1-13.pdf" H 5700 1700 50  0001 L CNN
 	1    5700 1700
 	1    0    0    -1  
