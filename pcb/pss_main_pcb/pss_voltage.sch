@@ -26,7 +26,7 @@ F 3 "" H 2400 2650 50  0001 C CNN
 	1    2400 2650
 	1    0    0    -1  
 $EndComp
-Text GLabel 2550 4650 3    50   BiDi ~ 0
+Text GLabel 2750 4650 3    50   BiDi ~ 0
 220_AC1
 $Comp
 L Connector:Conn_01x02_Male J?
@@ -36,7 +36,7 @@ AR Path="/5EDC5C90" Ref="J?"  Part="1"
 AR Path="/5ED9AD16/5EDC5C90" Ref="J1"  Part="1" 
 F 0 "J1" V 2450 2150 50  0000 L CNN
 F 1 "24V DC Input" V 2550 2000 50  0000 L CNN
-F 2 "Connector_AMASS:AMASS_XT60-F_1x02_P7.20mm_Vertical" H 2650 2250 50  0001 C CNN
+F 2 "Connector_AMASS:AMASS_XT30U-F_1x02_P5.0mm_Vertical" H 2650 2250 50  0001 C CNN
 F 3 "~" H 2650 2250 50  0001 C CNN
 	1    2650 2250
 	0    1    1    0   
@@ -267,8 +267,8 @@ P 6100 4550
 AR Path="/5EDEFDBB" Ref="C?"  Part="1" 
 AR Path="/5ED9AD16/5EDEFDBB" Ref="C1"  Part="1" 
 F 0 "C1" H 5850 4600 50  0000 L CNN
-F 1 "470u 50V" H 5500 4500 50  0000 L CNN
-F 2 "Capacitor_SMD:CP_Elec_16x17.5" H 6100 4550 50  0001 C CNN
+F 1 "470u 35V" H 5500 4500 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_10x10.5" H 6100 4550 50  0001 C CNN
 F 3 "~" H 6100 4550 50  0001 C CNN
 	1    6100 4550
 	1    0    0    -1  
@@ -441,8 +441,6 @@ Wire Wire Line
 Connection ~ 8900 4500
 Wire Wire Line
 	8900 4500 9250 4500
-Wire Wire Line
-	2550 4300 2550 4650
 $Comp
 L power:PWR_FLAG #FLG02
 U 1 1 5ED9A857
@@ -467,28 +465,26 @@ U 1 1 5ECE2051
 P 2650 4100
 F 0 "J2" V 2800 4100 50  0000 R CNN
 F 1 "220V AC Input" V 2700 4250 50  0000 R CNN
-F 2 "Connector:Banana_Jack_3Pin" H 2650 4100 50  0001 C CNN
+F 2 "Connector_Wire:SolderWire-2.5sqmm_1x03_P7.2mm_D2.4mm_OD3.6mm" H 2650 4100 50  0001 C CNN
 F 3 "~" H 2650 4100 50  0001 C CNN
 	1    2650 4100
 	0    -1   -1   0   
 $EndComp
-Text GLabel 2750 4650 3    50   BiDi ~ 0
+Text GLabel 2650 4650 3    50   BiDi ~ 0
 220_AC2
 Wire Wire Line
 	2750 4650 2750 4300
 $Comp
 L power:GNDPWR #PWR03
 U 1 1 5ECE62C4
-P 2650 5050
-F 0 "#PWR03" H 2650 4850 50  0001 C CNN
-F 1 "GNDPWR" H 2654 4896 50  0000 C CNN
-F 2 "" H 2650 5000 50  0001 C CNN
-F 3 "" H 2650 5000 50  0001 C CNN
-	1    2650 5050
+P 2550 4950
+F 0 "#PWR03" H 2550 4750 50  0001 C CNN
+F 1 "GNDPWR" H 2554 4796 50  0000 C CNN
+F 2 "" H 2550 4900 50  0001 C CNN
+F 3 "" H 2550 4900 50  0001 C CNN
+	1    2550 4950
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2650 5050 2650 4300
 $Comp
 L power:GNDPWR #PWR?
 U 1 1 5ED1418A
@@ -521,4 +517,8 @@ Wire Wire Line
 	5300 2400 6450 2400
 Wire Wire Line
 	5300 2850 6950 2850
+Wire Wire Line
+	2550 4300 2550 4950
+Wire Wire Line
+	2650 4650 2650 4300
 $EndSCHEMATC

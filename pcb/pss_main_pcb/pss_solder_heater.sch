@@ -1123,24 +1123,24 @@ Wire Wire Line
 $Comp
 L power:GNDPWR #PWR?
 U 1 1 5EB844F4
-P 1750 5700
+P 2250 5600
 AR Path="/5EB844F4" Ref="#PWR?"  Part="1" 
 AR Path="/5EE027BC/5EB844F4" Ref="#PWR?"  Part="1" 
 AR Path="/5EE1CBE0/5EB844F4" Ref="#PWR013"  Part="1" 
-F 0 "#PWR013" H 1750 5500 50  0001 C CNN
-F 1 "GNDPWR" H 1754 5546 50  0000 C CNN
-F 2 "" H 1750 5650 50  0001 C CNN
-F 3 "" H 1750 5650 50  0001 C CNN
-	1    1750 5700
+F 0 "#PWR013" H 2250 5400 50  0001 C CNN
+F 1 "GNDPWR" H 2254 5446 50  0000 C CNN
+F 2 "" H 2250 5550 50  0001 C CNN
+F 3 "" H 2250 5550 50  0001 C CNN
+	1    2250 5600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	1750 5700 1750 5650
-Text GLabel 1450 2950 0    50   UnSpc ~ 0
+Text GLabel 1450 2750 0    50   UnSpc ~ 0
 Iron_Heat_Pos
 Wire Wire Line
 	1450 2750 1600 2750
-Text GLabel 1450 2750 0    50   UnSpc ~ 0
+Text GLabel 1450 2950 0    50   UnSpc ~ 0
 Iron_Heat_Neg
 Wire Wire Line
 	1450 2950 1600 2950
@@ -1171,15 +1171,15 @@ Hot_Air_Reed
 $Comp
 L power:GND #PWR?
 U 1 1 5EB8450A
-P 2250 5500
+P 1750 5700
 AR Path="/5EB8450A" Ref="#PWR?"  Part="1" 
 AR Path="/5EE027BC/5EB8450A" Ref="#PWR?"  Part="1" 
 AR Path="/5EE1CBE0/5EB8450A" Ref="#PWR015"  Part="1" 
-F 0 "#PWR015" H 2250 5250 50  0001 C CNN
-F 1 "GND" H 2255 5327 50  0000 C CNN
-F 2 "" H 2250 5500 50  0001 C CNN
-F 3 "" H 2250 5500 50  0001 C CNN
-	1    2250 5500
+F 0 "#PWR015" H 1750 5450 50  0001 C CNN
+F 1 "GND" H 1755 5527 50  0000 C CNN
+F 2 "" H 1750 5700 50  0001 C CNN
+F 3 "" H 1750 5700 50  0001 C CNN
+	1    1750 5700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1202,7 +1202,7 @@ Wire Wire Line
 	2550 3150 2550 2950
 Wire Wire Line
 	2100 2950 2550 2950
-Text GLabel 2050 5400 2    50   Output ~ 0
+Text GLabel 2050 5150 2    50   Output ~ 0
 Hot_Air_Therm_Pos
 Wire Wire Line
 	2000 5400 2050 5400
@@ -1210,7 +1210,7 @@ Text GLabel 2050 5300 2    50   BiDi ~ 0
 220V_Heater1
 Wire Wire Line
 	2000 5300 2050 5300
-Text GLabel 2050 5150 2    50   BiDi ~ 0
+Text GLabel 2050 5400 2    50   BiDi ~ 0
 220V_Heater2
 Text Notes 1500 2150 0    50   ~ 0
 Handles Connectors\n
@@ -1283,4 +1283,6 @@ F 3 "~" H 5700 5850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Connection ~ 5700 6000
+Wire Wire Line
+	2250 5600 2250 5500
 $EndSCHEMATC
