@@ -1162,7 +1162,7 @@ F 3 "" H 750 5500 50  0001 C CNN
 	1    750  5500
 	1    0    0    -1  
 $EndComp
-Text GLabel 1300 5300 0    50   Input ~ 0
+Text GLabel 2050 5300 2    50   Input ~ 0
 Hot_Air_Fan
 Wire Wire Line
 	1300 5300 1500 5300
@@ -1206,7 +1206,7 @@ Text GLabel 2050 5150 2    50   Output ~ 0
 Hot_Air_Therm_Pos
 Wire Wire Line
 	2000 5400 2050 5400
-Text GLabel 2050 5300 2    50   BiDi ~ 0
+Text GLabel 1300 5300 0    50   BiDi ~ 0
 220V_Heater1
 Wire Wire Line
 	2000 5300 2050 5300
