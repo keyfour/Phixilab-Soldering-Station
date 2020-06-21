@@ -77,7 +77,7 @@ AR Path="/5EE25063" Ref="R?"  Part="1"
 AR Path="/5EE1CBE0/5EE25063" Ref="R10"  Part="1" 
 F 0 "R10" H 5270 2096 50  0000 L CNN
 F 1 "51 1W" H 5270 2005 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 5130 2050 50  0001 C CNN
+F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 5130 2050 50  0001 C CNN
 F 3 "~" H 5200 2050 50  0001 C CNN
 	1    5200 2050
 	1    0    0    -1  
