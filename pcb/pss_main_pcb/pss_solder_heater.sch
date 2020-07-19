@@ -1136,37 +1136,37 @@ F 3 "" H 2250 5550 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1750 5700 1750 5650
-Text GLabel 1450 2750 0    50   UnSpc ~ 0
+Text GLabel 2200 2750 2    50   UnSpc ~ 0
 Iron_Heat_Pos
 Wire Wire Line
 	1450 2750 1600 2750
-Text GLabel 1450 2950 0    50   UnSpc ~ 0
+Text GLabel 1450 2750 0    50   UnSpc ~ 0
 Iron_Heat_Neg
 Wire Wire Line
 	1450 2950 1600 2950
-Text GLabel 2200 2750 2    50   UnSpc ~ 0
+Text GLabel 1450 2950 0    50   UnSpc ~ 0
 Iron_Therm_Pos
 Wire Wire Line
 	2200 2750 2100 2750
 $Comp
 L power:GND #PWR?
 U 1 1 5EB84501
-P 750 5500
+P 650 5550
 AR Path="/5EB84501" Ref="#PWR?"  Part="1" 
 AR Path="/5EE027BC/5EB84501" Ref="#PWR?"  Part="1" 
 AR Path="/5EE1CBE0/5EB84501" Ref="#PWR012"  Part="1" 
-F 0 "#PWR012" H 750 5250 50  0001 C CNN
-F 1 "GND" H 755 5327 50  0000 C CNN
-F 2 "" H 750 5500 50  0001 C CNN
-F 3 "" H 750 5500 50  0001 C CNN
-	1    750  5500
+F 0 "#PWR012" H 650 5300 50  0001 C CNN
+F 1 "GND" H 655 5377 50  0000 C CNN
+F 2 "" H 650 5550 50  0001 C CNN
+F 3 "" H 650 5550 50  0001 C CNN
+	1    650  5550
 	1    0    0    -1  
 $EndComp
-Text GLabel 2050 5300 2    50   Input ~ 0
+Text GLabel 1300 5300 0    50   Input ~ 0
 Hot_Air_Fan
 Wire Wire Line
 	1300 5300 1500 5300
-Text GLabel 1500 5500 0    50   Output ~ 0
+Text GLabel 2050 5150 2    50   Output ~ 0
 Hot_Air_Reed
 $Comp
 L power:GND #PWR?
@@ -1202,11 +1202,11 @@ Wire Wire Line
 	2550 3150 2550 2950
 Wire Wire Line
 	2100 2950 2550 2950
-Text GLabel 2050 5150 2    50   Output ~ 0
+Text GLabel 1500 5500 0    50   Output ~ 0
 Hot_Air_Therm_Pos
 Wire Wire Line
 	2000 5400 2050 5400
-Text GLabel 1300 5300 0    50   BiDi ~ 0
+Text GLabel 2050 5300 2    50   BiDi ~ 0
 220V_Heater1
 Wire Wire Line
 	2000 5300 2050 5300
@@ -1216,10 +1216,6 @@ Text Notes 1500 2150 0    50   ~ 0
 Handles Connectors\n
 Wire Wire Line
 	2050 5150 1750 5150
-Wire Wire Line
-	750  5500 750  5400
-Wire Wire Line
-	750  5400 1500 5400
 $Comp
 L gx16_conn:GX16-M5_connector J?
 U 1 1 5EB844E1
@@ -1285,4 +1281,8 @@ $EndComp
 Connection ~ 5700 6000
 Wire Wire Line
 	2250 5600 2250 5500
+Wire Wire Line
+	650  5550 650  5400
+Wire Wire Line
+	650  5400 1500 5400
 $EndSCHEMATC

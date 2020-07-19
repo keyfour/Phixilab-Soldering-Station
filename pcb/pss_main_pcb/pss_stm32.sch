@@ -437,7 +437,6 @@ Text GLabel 5100 3750 0    50   Input ~ 0
 STM_BOOT
 Wire Wire Line
 	5100 3750 5200 3750
-NoConn ~ 5200 4250
 $Comp
 L Device:Rotary_Encoder_Switch SW?
 U 1 1 5EC370A1
@@ -512,9 +511,9 @@ Wire Wire Line
 	2600 7400 3050 7400
 Wire Wire Line
 	3050 7400 3050 7500
-Text GLabel 6550 3650 2    50   Input ~ 0
-Iron_Themp_ADC
 Text GLabel 6550 3550 2    50   Input ~ 0
+Iron_Themp_ADC
+Text GLabel 6550 3650 2    50   Input ~ 0
 Hot_Air_Themp_ADC
 Wire Wire Line
 	6300 3550 6550 3550
@@ -599,10 +598,8 @@ Wire Wire Line
 	6300 4850 6550 4850
 Wire Wire Line
 	6550 4950 6300 4950
-Text GLabel 6550 5050 2    50   Input ~ 0
+Text GLabel 5100 4250 0    50   Input ~ 0
 Hot_Air_Reed
-Wire Wire Line
-	6550 5050 6300 5050
 Text GLabel 5050 5050 0    50   Output ~ 0
 Sold_PWM
 Wire Wire Line
@@ -782,4 +779,7 @@ Wire Wire Line
 	9400 3950 9400 4600
 Wire Wire Line
 	8600 2600 9000 2600
+Wire Wire Line
+	5200 4250 5100 4250
+NoConn ~ 6300 5050
 $EndSCHEMATC

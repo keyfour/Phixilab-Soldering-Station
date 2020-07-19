@@ -1,4 +1,4 @@
-update=Вс 21 июн 2020 11:25:46
+update=Вс 19 июл 2020 22:05:11
 version=1
 last_client=kicad
 [general]
@@ -248,7 +248,7 @@ dPairGap=0.25
 dPairViaGap=0.25
 [pcbnew/Netclasses/1]
 Name=Power_220
-Clearance=0.75
+Clearance=0.5
 TrackWidth=2.7
 ViaDiameter=0.8
 ViaDrill=0.4
@@ -258,6 +258,28 @@ dPairWidth=0.2
 dPairGap=0.25
 dPairViaGap=0.25
 [pcbnew/Netclasses/2]
+Name=Power_24
+Clearance=0.5
+TrackWidth=1.25
+ViaDiameter=0.8
+ViaDrill=0.4
+uViaDiameter=0.3
+uViaDrill=0.1
+dPairWidth=0.2
+dPairGap=0.25
+dPairViaGap=0.25
+[pcbnew/Netclasses/3]
+Name=Power_3_3_5
+Clearance=0.2
+TrackWidth=0.45
+ViaDiameter=0.8
+ViaDrill=0.4
+uViaDiameter=0.3
+uViaDrill=0.1
+dPairWidth=0.2
+dPairGap=0.25
+dPairViaGap=0.25
+[pcbnew/Netclasses/4]
 Name=Pwr_GND
 Clearance=0.2
 TrackWidth=2.1

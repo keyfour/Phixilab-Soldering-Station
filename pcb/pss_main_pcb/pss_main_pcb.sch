@@ -55,4 +55,6 @@ Text Notes 3150 4600 0    50   ~ 0
 - STM32 MCU\n
 Text Notes 6300 4700 0    50   ~ 0
 - ESP32 Wireless MCU\n- LCD Display\n
+NoConn ~ 3800 2150
+NoConn ~ 4400 2400
 $EndSCHEMATC
