@@ -586,10 +586,8 @@ Text GLabel 6550 4550 2    50   Input ~ 0
 HotA_Switch
 Wire Wire Line
 	6300 4550 6550 4550
-Text GLabel 6550 4650 2    50   Output ~ 0
+Text GLabel 5050 4950 0    50   Output ~ 0
 Fan_PWM
-Wire Wire Line
-	6550 4650 6300 4650
 Text GLabel 6550 4950 2    50   Input ~ 0
 STM_SWCLK
 Text GLabel 6550 4850 2    50   BiDi ~ 0
@@ -604,10 +602,8 @@ Text GLabel 5050 5050 0    50   Output ~ 0
 Sold_PWM
 Wire Wire Line
 	5200 5050 5050 5050
-Text GLabel 5050 4950 0    50   Output ~ 0
+Text GLabel 5050 4850 0    50   Output ~ 0
 Heater_PWM
-Wire Wire Line
-	5200 4950 5050 4950
 Text GLabel 5100 4150 0    50   Output ~ 0
 Enable_5V
 Wire Wire Line
@@ -616,7 +612,6 @@ NoConn ~ 5200 4450
 NoConn ~ 5200 4550
 NoConn ~ 5200 4650
 NoConn ~ 5200 4750
-NoConn ~ 5200 4850
 NoConn ~ 6300 4750
 $Comp
 L Device:LED D6
@@ -782,4 +777,9 @@ Wire Wire Line
 Wire Wire Line
 	5200 4250 5100 4250
 NoConn ~ 6300 5050
+Wire Wire Line
+	5050 4850 5200 4850
+Wire Wire Line
+	5200 4950 5050 4950
+NoConn ~ 6300 4650
 $EndSCHEMATC
