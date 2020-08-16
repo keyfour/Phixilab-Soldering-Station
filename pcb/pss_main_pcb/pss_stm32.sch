@@ -527,19 +527,13 @@ Text GLabel 6550 3850 2    50   Input ~ 0
 STM_UART_RX
 Wire Wire Line
 	6300 3850 6550 3850
-Text GLabel 6550 4050 2    50   Input ~ 0
+Text GLabel 6550 4550 2    50   Input ~ 0
 Sold_Switch
-Wire Wire Line
-	6300 4050 6550 4050
 NoConn ~ 6300 3950
-Text GLabel 6550 4150 2    50   Output ~ 0
+Text GLabel 6550 4450 2    50   Output ~ 0
 Sold_Enc_A
-Text GLabel 6550 4250 2    50   Input ~ 0
+Text GLabel 6550 4350 2    50   Input ~ 0
 Sold_Enc_B
-Wire Wire Line
-	6300 4150 6550 4150
-Wire Wire Line
-	6550 4250 6300 4250
 $Comp
 L Device:R R22
 U 1 1 5EC799DA
@@ -574,15 +568,15 @@ Wire Wire Line
 	600  7300 650  7300
 Wire Wire Line
 	950  7300 1450 7300
-Text GLabel 6550 4350 2    50   Input ~ 0
+Text GLabel 5050 4850 0    50   Input ~ 0
 HotA_Enc_A
 Wire Wire Line
 	6300 4350 6550 4350
-Text GLabel 6550 4450 2    50   Input ~ 0
+Text GLabel 5050 4750 0    50   Input ~ 0
 HotA_Enc_B
 Wire Wire Line
 	6550 4450 6300 4450
-Text GLabel 6550 4550 2    50   Input ~ 0
+Text GLabel 5050 4650 0    50   Input ~ 0
 HotA_Switch
 Wire Wire Line
 	6300 4550 6550 4550
@@ -602,7 +596,7 @@ Text GLabel 5050 5050 0    50   Output ~ 0
 Sold_PWM
 Wire Wire Line
 	5200 5050 5050 5050
-Text GLabel 5050 4850 0    50   Output ~ 0
+Text GLabel 6550 4650 2    50   Output ~ 0
 Heater_PWM
 Text GLabel 5100 4150 0    50   Output ~ 0
 Enable_5V
@@ -610,8 +604,6 @@ Wire Wire Line
 	5200 4150 5100 4150
 NoConn ~ 5200 4450
 NoConn ~ 5200 4550
-NoConn ~ 5200 4650
-NoConn ~ 5200 4750
 NoConn ~ 6300 4750
 $Comp
 L Device:LED D6
@@ -778,8 +770,16 @@ Wire Wire Line
 	5200 4250 5100 4250
 NoConn ~ 6300 5050
 Wire Wire Line
-	5050 4850 5200 4850
-Wire Wire Line
 	5200 4950 5050 4950
-NoConn ~ 6300 4650
+Wire Wire Line
+	6550 4650 6300 4650
+Wire Wire Line
+	5050 4650 5200 4650
+Wire Wire Line
+	5050 4750 5200 4750
+Wire Wire Line
+	5050 4850 5200 4850
+NoConn ~ 6300 4250
+NoConn ~ 6300 4150
+NoConn ~ 6300 4050
 $EndSCHEMATC
