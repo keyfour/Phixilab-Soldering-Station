@@ -193,7 +193,7 @@ AR Path="/5EE2A937" Ref="L?"  Part="1"
 AR Path="/5EE1CBE0/5EE2A937" Ref="L3"  Part="1" 
 F 0 "L3" V 5690 3400 50  0000 C CNN
 F 1 "1u" V 5599 3400 50  0000 C CNN
-F 2 "Inductor_SMD:L_Taiyo-Yuden_NR-30xx_HandSoldering" H 5500 3400 50  0001 C CNN
+F 2 "Inductor_SMD:L_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5500 3400 50  0001 C CNN
 F 3 "~" H 5500 3400 50  0001 C CNN
 	1    5500 3400
 	0    -1   -1   0   
@@ -206,7 +206,7 @@ AR Path="/5EE2A945" Ref="C?"  Part="1"
 AR Path="/5EE1CBE0/5EE2A945" Ref="C6"  Part="1" 
 F 0 "C6" H 5965 3696 50  0000 L CNN
 F 1 "47u 50V" H 5650 3500 50  0000 L CNN
-F 2 "Capacitor_SMD:CP_Elec_8x10.5" H 5850 3650 50  0001 C CNN
+F 2 "Capacitor_SMD:CP_Elec_8x10" H 5850 3650 50  0001 C CNN
 F 3 "~" H 5850 3650 50  0001 C CNN
 	1    5850 3650
 	1    0    0    -1  
@@ -1063,7 +1063,7 @@ AR Path="/5EE32174" Ref="C?"  Part="1"
 AR Path="/5EE1CBE0/5EE32174" Ref="C8"  Part="1" 
 F 0 "C8" H 8915 5696 50  0000 L CNN
 F 1 "10u 16V" H 8800 5550 50  0000 L CNN
-F 2 "Capacitor_SMD:CP_Elec_4x5.4" H 8800 5650 50  0001 C CNN
+F 2 "Capacitor_SMD:CP_Elec_4x5.3" H 8800 5650 50  0001 C CNN
 F 3 "~" H 8800 5650 50  0001 C CNN
 	1    8800 5650
 	1    0    0    -1  
@@ -1238,7 +1238,7 @@ AR Path="/5EE2504D" Ref="Q?"  Part="1"
 AR Path="/5EE1CBE0/5EE2504D" Ref="Q6"  Part="1" 
 F 0 "Q6" H 5829 1746 50  0000 L CNN
 F 1 "BT139B-800" H 5829 1655 50  0000 L CNN
-F 2 "bt139b:D2PAK-3" H 5900 1625 50  0001 L CIN
+F 2 "Package_TO_SOT_SMD:TO-263-2" H 5900 1625 50  0001 L CIN
 F 3 "https://www.ariat-tech.com/datasheet/42/SBR545D1-13.pdf" H 5700 1700 50  0001 L CNN
 	1    5700 1700
 	1    0    0    -1  

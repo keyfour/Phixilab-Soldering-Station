@@ -243,7 +243,7 @@ U 1 1 5EB1D3B0
 P 3700 1100
 F 0 "SW3" H 3700 1385 50  0000 C CNN
 F 1 "SW_Push" H 3700 1294 50  0000 C CNN
-F 2 "Button_Switch_SMD:SW_SPST_B3S-1000" H 3700 1300 50  0001 C CNN
+F 2 "buttons:SW_SPST_B3S-1000" H 3700 1300 50  0001 C CNN
 F 3 "~" H 3700 1300 50  0001 C CNN
 	1    3700 1100
 	1    0    0    -1  
@@ -257,7 +257,7 @@ AR Path="/5EE027BC/5EB3C4E2" Ref="SW?"  Part="1"
 AR Path="/5EE5A305/5EB3C4E2" Ref="SW2"  Part="1" 
 F 0 "SW2" H 1800 6467 50  0000 C CNN
 F 1 "Soldering Iron Input" H 1800 6376 50  0000 C CNN
-F 2 "Rotary_Encoder:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm" H 1650 6260 50  0001 C CNN
+F 2 "encoders:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm" H 1650 6260 50  0001 C CNN
 F 3 "~" H 1800 6360 50  0001 C CNN
 	1    1800 6100
 	1    0    0    -1  
@@ -446,7 +446,7 @@ AR Path="/5EE027BC/5EC370A1" Ref="SW?"  Part="1"
 AR Path="/5EE5A305/5EC370A1" Ref="SW1"  Part="1" 
 F 0 "SW1" H 1750 7667 50  0000 C CNN
 F 1 "Hot Air Gun Input" H 1750 7576 50  0000 C CNN
-F 2 "Rotary_Encoder:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm" H 1600 7460 50  0001 C CNN
+F 2 "encoders:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm" H 1600 7460 50  0001 C CNN
 F 3 "~" H 1750 7560 50  0001 C CNN
 	1    1750 7300
 	1    0    0    -1  
@@ -598,10 +598,8 @@ Wire Wire Line
 	5200 5050 5050 5050
 Text GLabel 6550 4650 2    50   Output ~ 0
 Heater_PWM
-Text GLabel 5100 4150 0    50   Output ~ 0
+Text GLabel 6550 5050 2    50   Output ~ 0
 Enable_5V
-Wire Wire Line
-	5200 4150 5100 4150
 NoConn ~ 5200 4450
 NoConn ~ 5200 4550
 NoConn ~ 6300 4750
@@ -768,7 +766,6 @@ Wire Wire Line
 	8600 2600 9000 2600
 Wire Wire Line
 	5200 4250 5100 4250
-NoConn ~ 6300 5050
 Wire Wire Line
 	5200 4950 5050 4950
 Wire Wire Line
@@ -782,4 +779,7 @@ Wire Wire Line
 NoConn ~ 6300 4250
 NoConn ~ 6300 4150
 NoConn ~ 6300 4050
+Wire Wire Line
+	6300 5050 6550 5050
+NoConn ~ 5200 4150
 $EndSCHEMATC

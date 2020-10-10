@@ -1,7 +1,8 @@
 (sym_lib_table
-  (lib (name gx16_conn)(type Legacy)(uri /home/keyfour/projects/phixilab-soldering-station/pcb/pss_main_pcb/gx16_conn.lib)(options "")(descr ""))
-  (lib (name Transistors_custom)(type Legacy)(uri /home/keyfour/projects/phixilab-soldering-station/pcb/pss_main_pcb/Transistors_custom.lib)(options "")(descr ""))
-  (lib (name Opto_custom)(type Legacy)(uri /home/keyfour/projects/phixilab-soldering-station/pcb/pss_main_pcb/Opto_custom.lib)(options "")(descr ""))
-  (lib (name Triac_custom)(type Legacy)(uri /home/keyfour/projects/phixilab-soldering-station/pcb/pss_main_pcb/Triac_custom.lib)(options "")(descr ""))
   (lib (name display)(type Legacy)(uri ${KIPRJMOD}/display.lib)(options "")(descr ""))
+  (lib (name Triac_custom)(type Legacy)(uri ${KIPRJMOD}/Triac_custom.lib)(options "")(descr ""))
+  (lib (name Transistors_custom)(type Legacy)(uri ${KIPRJMOD}/Transistors_custom.lib)(options "")(descr ""))
+  (lib (name Opto_custom)(type Legacy)(uri ${KIPRJMOD}/Opto_custom.lib)(options "")(descr ""))
+  (lib (name gx16_conn)(type Legacy)(uri ${KIPRJMOD}/gx16_conn.lib)(options "")(descr ""))
+  (lib (name LM3940IMP-3.3_NOPB)(type Legacy)(uri ${KIPRJMOD}/LM3940IMP-3.3_NOPB.lib)(options "")(descr ""))
 )

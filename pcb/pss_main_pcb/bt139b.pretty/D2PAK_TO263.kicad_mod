@@ -1,0 +1,51 @@
+
+(module D2PAK_TO263 (layer F.Cu) (tedit 5F81DF0E)
+  (descr "")
+  (fp_text reference REF** (at 0.0 -5.71509 0) (layer F.SilkS)
+    (effects (font (size 0.640009448819 0.640009448819) (thickness 0.015)))
+  )
+  (fp_text value D2PAK_TO263 (at 0.0 5.7244 0) (layer F.Fab)
+    (effects (font (size 0.641052755906 0.641052755906) (thickness 0.015)))
+  )
+  (fp_line (start 5.85 5.0) (end -3.0 5.0) (layer F.SilkS) (width 0.127))
+  (fp_line (start -3.0 5.0) (end -3.0 -5.0) (layer F.SilkS) (width 0.127))
+  (fp_line (start -3.0 -5.0) (end 5.85 -5.0) (layer F.SilkS) (width 0.127))
+  (fp_line (start 5.85 -5.0) (end 5.85 5.0) (layer F.SilkS) (width 0.127))
+  (fp_poly
+    (pts
+      (xy -5.70275 -4.8)
+      (xy -4.8 -4.8)
+      (xy -4.8 -0.300144)
+      (xy -5.70275 -0.300144)
+    ) (layer F.SilkS) (width 0.01)
+  )
+  (fp_poly
+    (pts
+      (xy -3.95169 -0.45)
+      (xy -2.95 -0.45)
+      (xy -2.95 0.450193)
+      (xy -3.95169 0.450193)
+    ) (layer F.SilkS) (width 0.01)
+  )
+  (fp_poly
+    (pts
+      (xy 5.9 -4.3)
+      (xy 6.9 -4.3)
+      (xy 7.4 -3.8)
+      (xy 7.4 3.8)
+      (xy 6.9 4.3)
+      (xy 5.9 4.3)
+    ) (layer F.SilkS) (width 0.127)
+  )
+  (fp_poly
+    (pts
+      (xy -5.72394 0.23595)
+      (xy -4.81405 0.23595)
+      (xy -4.81405 4.77229)
+      (xy -5.72394 4.77229)
+    ) (layer F.SilkS) (width 0.01)
+  )
+  (pad 2 smd rect (at 3.2 0.0) (size 9.4 10.4) (layers F.Cu F.Mask F.Paste))
+  (pad 1 smd rect (at -6.0 -2.54) (size 4.0 1.6) (layers F.Cu F.Mask F.Paste))
+  (pad 3 smd rect (at -6.0 2.54) (size 4.0 1.6) (layers F.Cu F.Mask F.Paste))
+)

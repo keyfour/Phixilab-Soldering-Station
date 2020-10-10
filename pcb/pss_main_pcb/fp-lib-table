@@ -3,4 +3,8 @@
   (lib (name moc3023s)(type KiCad)(uri ${KIPRJMOD}/moc3023s.pretty)(options "")(descr ""))
   (lib (name bt139b)(type KiCad)(uri ${KIPRJMOD}/bt139b.pretty)(options "")(descr ""))
   (lib (name display)(type KiCad)(uri ${KIPRJMOD}/display.pretty)(options "")(descr ""))
+  (lib (name VXO78012)(type KiCad)(uri ${KIPRJMOD}/VXO78012.pretty)(options "")(descr ""))
+  (lib (name encoders)(type KiCad)(uri ${KIPRJMOD}/encoders.pretty)(options "")(descr ""))
+  (lib (name inductors)(type KiCad)(uri ${KIPRJMOD}/inductors.pretty)(options "")(descr ""))
+  (lib (name buttons)(type KiCad)(uri ${KIPRJMOD}/buttons.pretty)(options "")(descr ""))
 )
