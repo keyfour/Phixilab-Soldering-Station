@@ -1,68 +1,109 @@
 @startuml
 
 component "AC-DC Power Supply" as power {
-    node "220V AC -> 24V DC"
+    node "220V AC -> 24V DC" as powers
 }
+
+component "Fuse" as fuse
+
+interface "220v input" as pinput
+
+pinput ---> powers
+
 component "Cooler Fan" as cooller
 component "Antenna" as antenna
 component "Power Button" as button
 
-database "Solder" as solder {
-    component "Thermocouple Solder" as thcSolder
+node "Solder" as solder {
+    component "Thermocouple Solder" as thcSolder #LightBlue
+    component "Heater" as hSolder #LightSalmon
 }
 
-database "Heat Gun" as gun {
-    component "Thermocouple Heat Gun" as thcHeat
+node "Heat Gun" as gun {
+    component "Thermocouple Heat Gun" as thcHeat #LightBlue
+    component "Heater" as hHeat #LightCoral
+    component "Fan" as fHeat #LightSalmon
 }
 
 node "PCB" as interfaces {
-    component "DC-DC Converter 3.3v" as converter3
-    component "DC-DC Converter 5v" as converter5
 
-    cloud "3.3V DC" as lvdomain {
-        component "LCD Display" as display
-        component "ESP32 Module " as mcu
-        component "Encoder Input Temp Solder Iron" as inputTemp
-        component "Encoder Input Heat Gun" as inputHeat
-        component "Encoder Input Main" as inputMain
-        component "STM32 MCU" as driver
-        component "Amplifier" as amp
+    interface "24v input" as vinput24 #LightSalmon
+    interface "220v input" as vinput220 #LightCoral
+
+    component "Voltage Regulators" #LightPink {
+
+        component "DC-DC Converter 12v/5v" as converter5
+        component "DC-DC Converter 5v/3.3v" as converter3
+        component "DC-DC Converter 24v/12v" as converter12
+        converter12 -> converter5
+        converter5 -> converter3
     }
-    cloud "5V DC" as lvdomain2
-    cloud "220V AC" as hvdomain
-    cloud "24V DC"  as mvdomain
+
+    cloud "220V AC" as hvdomain #LightCoral  {
+        component "Controls" as hvctrls
+    }
+
+    cloud "24V DC"  as mvdomain #LightSalmon {
+        component "Controls" as mvctrls
+    }
+    cloud "5V DC" as lvdomain2 #LightBlue {
+        component "Controls" as lvctrls
+    }
+
+    cloud "3.3V DC" as lvdomain #LightCyan {
+        component "Input Controls" as controls #LightGreen {
+            component "Encoder Input Temp Solder Iron" as inputTemp
+            component "Encoder Input Heat Gun" as inputHeat
+            component "Encoder Input Main" as inputMain
+        }
+
+        component "LCD Display" as display #LightGreen
+        component "ESP32 Module " as mcu #Pink
+        component "Driver" as mcud #Pink {
+            component "STM32 MCU" as driver
+            component "Amplifier" as amp
+        }
+
+    }
+
+    lvctrls .> mvctrls
+    lvctrls .> hvctrls
+
+    amp .> driver : Temperature
+
+    mcu ..> display : UI
+
+    inputMain .> mcu : Menu Cntrl
+    inputTemp .> driver : Temperature
+    inputHeat .> driver : Temperature
+
+    mcu <..> driver : UART
+
+    converter5 -> lvdomain2
+    converter3 -> lvdomain
+
+    vinput220 --> hvdomain
+    vinput24 --> mvdomain
+    vinput24 --> converter12
+
+    driver ..> lvctrls
+    mvctrls ..> hSolder
+    mvctrls ..> fHeat
+    hvctrls ..> hHeat
 }
 
-power --> converter3 : 24VDC
-power --> converter5 : 24VDC
-power --> hvdomain : 220VAC
-power --> mvdomain : 24VDC
-converter3 --> lvdomain : 3.3V
-converter5 --> lvdomain2 : 5V
-mvdomain --> cooller : 24V
-mvdomain -down-> solder : 24VDC   
-hvdomain -down-> gun : 220VAC
-mvdomain --> gun : 24V
+powers ---> vinput24 : 24VDC
+powers ---> cooller
+pinput ---> fuse
+fuse ---> vinput220 : 220VAC
 
-thcSolder ..> amp : Temperature
-thcHeat ..> amp : Temperature
-amp ..> driver : Temperature
+thcSolder ..> amp : Div2
+thcHeat ..> amp : Div2
 
-mcu ..> display : UI
+lvctrls ---> thcHeat
+lvctrls ---> thcSolder
 
-inputMain ..> mcu : Menu Cntrl
-inputTemp ..> driver : Temperature
-inputHeat ..> driver : Temperature
-
-mcu <...> driver : UART
-
-driver ..> hvdomain : 5V Ctnrl\n normal off
-driver ..> mvdomain
-
-lvdomain2 ..> hvdomain
-lvdomain2 ..>mvdomain
-
-mcu <.left.> antenna
+mcu <...> antenna
 
 button ..> power
 
