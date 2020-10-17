@@ -25,19 +25,24 @@ node "Heat Gun" as gun {
     component "Fan" as fHeat #LightSalmon
 }
 
-node "PCB" as interfaces {
+node "Main PCB" as interfaces {
 
     interface "24v input" as vinput24 #LightSalmon
     interface "220v input" as vinput220 #LightCoral
 
     component "Voltage Regulators" #LightPink {
 
-        component "DC-DC Converter 12v/5v" as converter5
-        component "DC-DC Converter 5v/3.3v" as converter3
-        component "DC-DC Converter 24v/12v" as converter12
-        converter12 -> converter5
-        converter5 -> converter3
+        component "DC-DC Converter 24v/5v" as converter5
     }
+
+    component "Input Controls" as controls #LightGreen {
+        component "Encoder Input Temp Solder Iron" as inputTemp
+        component "Encoder Input Heat Gun" as inputHeat
+        component "Encoder Input Main" as inputMain
+    }
+
+    component "LCD Display" as display #LightGreen
+
 
     cloud "220V AC" as hvdomain #LightCoral  {
         component "Controls" as hvctrls
@@ -50,14 +55,20 @@ node "PCB" as interfaces {
         component "Controls" as lvctrls
     }
 
-    cloud "3.3V DC" as lvdomain #LightCyan {
-        component "Input Controls" as controls #LightGreen {
-            component "Encoder Input Temp Solder Iron" as inputTemp
-            component "Encoder Input Heat Gun" as inputHeat
-            component "Encoder Input Main" as inputMain
-        }
+    converter5 -> lvdomain2
 
-        component "LCD Display" as display #LightGreen
+    vinput220 --> hvdomain
+    vinput24 --> mvdomain
+    vinput24 -d-> converter5
+
+    mvctrls ..> hSolder
+    mvctrls ..> fHeat
+    hvctrls ..> hHeat
+}
+
+node "Processor PCB" as processor {
+    cloud "3.3V DC" as lvdomain #LightCyan {
+
         component "ESP32 Module " as mcu #Pink
         component "Driver" as mcud #Pink {
             component "STM32 MCU" as driver
@@ -65,6 +76,10 @@ node "PCB" as interfaces {
         }
 
     }
+    component "DC-DC Converter 5v/3.3v" as converter3
+    converter5 -r-> converter3
+    converter3 -r-> lvdomain
+    mcu <..> driver : UART
 
     lvctrls .> mvctrls
     lvctrls .> hvctrls
@@ -76,20 +91,7 @@ node "PCB" as interfaces {
     inputMain .> mcu : Menu Cntrl
     inputTemp .> driver : Temperature
     inputHeat .> driver : Temperature
-
-    mcu <..> driver : UART
-
-    converter5 -> lvdomain2
-    converter3 -> lvdomain
-
-    vinput220 --> hvdomain
-    vinput24 --> mvdomain
-    vinput24 --> converter12
-
     driver ..> lvctrls
-    mvctrls ..> hSolder
-    mvctrls ..> fHeat
-    hvctrls ..> hHeat
 }
 
 powers ---> vinput24 : 24VDC
