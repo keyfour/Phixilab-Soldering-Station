@@ -70,7 +70,7 @@ node "Processor PCB" as processor {
     cloud "3.3V DC" as lvdomain #LightCyan {
 
         component "ESP32 Module " as mcu #Pink
-        component "Driver" as mcud #Pink {
+        component "Driver" as mcud #LightGreen {
             component "STM32 MCU" as driver
             component "Amplifier" as amp
         }
