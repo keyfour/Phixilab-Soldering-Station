@@ -108,7 +108,7 @@ U 1 1 5ED6F459
 P 7100 1800
 F 0 "SW2" H 7100 2085 50  0000 C CNN
 F 1 "EN" H 7100 1994 50  0000 C CNN
-F 2 "buttons:SW_SPST_B3S-1000" H 7100 2000 50  0001 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_B3U-1000P" H 7100 2000 50  0001 C CNN
 F 3 "~" H 7100 2000 50  0001 C CNN
 	1    7100 1800
 	1    0    0    -1  
@@ -119,7 +119,7 @@ U 1 1 5ED6FE52
 P 6000 1700
 F 0 "SW1" H 6000 1985 50  0000 C CNN
 F 1 "Boot" H 6000 1894 50  0000 C CNN
-F 2 "buttons:SW_SPST_B3S-1000" H 6000 1900 50  0001 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_B3U-1000P" H 6000 1900 50  0001 C CNN
 F 3 "~" H 6000 1900 50  0001 C CNN
 	1    6000 1700
 	1    0    0    -1  
@@ -377,7 +377,7 @@ U 1 1 5ED13088
 P 6150 2700
 F 0 "D1" H 6143 2445 50  0000 C CNN
 F 1 "LED" H 6143 2536 50  0000 C CNN
-F 2 "LED_THT:LED_D5.0mm" H 6150 2700 50  0001 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6150 2700 50  0001 C CNN
 F 3 "~" H 6150 2700 50  0001 C CNN
 	1    6150 2700
 	-1   0    0    1   
@@ -493,7 +493,7 @@ U 1 1 5EB1D3B0
 P 7150 900
 F 0 "SW3" H 7150 1185 50  0000 C CNN
 F 1 "SW_Push" H 7150 1094 50  0000 C CNN
-F 2 "buttons:SW_SPST_B3S-1000" H 7150 1100 50  0001 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_B3U-1000P" H 7150 1100 50  0001 C CNN
 F 3 "~" H 7150 1100 50  0001 C CNN
 	1    7150 900 
 	1    0    0    -1  
@@ -680,31 +680,15 @@ F 3 "" H 6850 3750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 6250 5100
-NoConn ~ 7350 5000
-NoConn ~ 7350 5100
-NoConn ~ 7350 5200
-Wire Wire Line
-	6100 5800 6250 5800
 Wire Wire Line
 	6100 5700 6250 5700
 Wire Wire Line
-	6100 5600 6250 5600
-Wire Wire Line
 	7600 5600 7350 5600
-Wire Wire Line
-	6250 5900 6100 5900
-Wire Wire Line
-	6250 5200 6150 5200
-NoConn ~ 7350 5700
-NoConn ~ 6250 5500
-NoConn ~ 6250 5400
-Text GLabel 7600 5600 2    50   Output ~ 0
+Text GLabel 7600 5100 2    50   Output ~ 0
 Heater_PWM
-Wire Wire Line
-	6250 6000 6100 6000
-Text GLabel 6100 6000 0    50   Output ~ 0
+Text GLabel 7600 4900 2    50   Output ~ 0
 Sold_PWM
-Text GLabel 6150 5200 0    50   Input ~ 0
+Text GLabel 7600 5700 2    50   Input ~ 0
 Hot_Air_Reed
 Wire Wire Line
 	7600 5900 7350 5900
@@ -714,11 +698,11 @@ Text GLabel 7600 5800 2    50   BiDi ~ 0
 STM_SWDIO
 Text GLabel 7600 5900 2    50   Input ~ 0
 STM_SWCLK
-Text GLabel 6100 5900 0    50   Output ~ 0
+Text GLabel 7600 5600 2    50   Output ~ 0
 Fan_PWM
 Wire Wire Line
 	7350 5500 7600 5500
-Text GLabel 6100 5600 0    50   Input ~ 0
+Text GLabel 7600 5500 2    50   Input ~ 0
 HotA_Switch
 Wire Wire Line
 	7600 5400 7350 5400
@@ -726,14 +710,13 @@ Text GLabel 6100 5700 0    50   Input ~ 0
 HotA_Enc_B
 Wire Wire Line
 	7350 5300 7600 5300
-Text GLabel 6100 5800 0    50   Input ~ 0
+Text GLabel 7600 5200 2    50   Input ~ 0
 HotA_Enc_A
 Text GLabel 7600 5300 2    50   Input ~ 0
 Sold_Enc_B
 Text GLabel 7600 5400 2    50   Output ~ 0
 Sold_Enc_A
-NoConn ~ 7350 4900
-Text GLabel 7600 5500 2    50   Input ~ 0
+Text GLabel 7600 5000 2    50   Input ~ 0
 Sold_Switch
 Wire Wire Line
 	7350 4800 7600 4800
@@ -743,13 +726,9 @@ Wire Wire Line
 	7600 4700 7350 4700
 Text GLabel 7600 4700 2    50   Output ~ 0
 STM_UART_TX
-Wire Wire Line
-	7600 4600 7350 4600
-Wire Wire Line
-	7350 4500 7600 4500
-Text GLabel 7600 4600 2    50   Input ~ 0
+Text GLabel 6100 5500 0    50   Input ~ 0
 Hot_Air_Themp_ADC
-Text GLabel 7600 4500 2    50   Input ~ 0
+Text GLabel 7600 4600 2    50   Input ~ 0
 Iron_Themp_ADC
 Wire Wire Line
 	6150 4700 6250 4700
@@ -1621,8 +1600,6 @@ Wire Wire Line
 	9250 2200 9400 2200
 Wire Wire Line
 	9250 2100 9400 2100
-Text GLabel 10400 2100 2    50   Output ~ 0
-Hot_Air_Therm_Pos
 Wire Wire Line
 	9250 2000 9400 2000
 Wire Wire Line
@@ -1678,12 +1655,12 @@ $EndComp
 $Comp
 L power:+5V #PWR038
 U 1 1 5FF764FA
-P 11100 2400
-F 0 "#PWR038" H 11100 2250 50  0001 C CNN
-F 1 "+5V" H 11115 2573 50  0000 C CNN
-F 2 "" H 11100 2400 50  0001 C CNN
-F 3 "" H 11100 2400 50  0001 C CNN
-	1    11100 2400
+P 11100 2650
+F 0 "#PWR038" H 11100 2500 50  0001 C CNN
+F 1 "+5V" H 11115 2823 50  0000 C CNN
+F 2 "" H 11100 2650 50  0001 C CNN
+F 3 "" H 11100 2650 50  0001 C CNN
+	1    11100 2650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1703,39 +1680,25 @@ F 3 "" H 8950 750 50  0001 C CNN
 $EndComp
 Text GLabel 10400 1000 2    50   Output ~ 0
 Main_Enc_B
-Text GLabel 10400 1300 2    50   Output ~ 0
-Sold_Enc_B
 Text GLabel 10400 1200 2    50   Output ~ 0
-Sold_Enc_A
-Text GLabel 10400 1400 2    50   Output ~ 0
-Sold_Switch
-Text GLabel 10400 1500 2    50   Output ~ 0
-HotA_Enc_A
-Text GLabel 10400 1600 2    50   Output ~ 0
 HotA_Enc_B
-Text GLabel 10400 1700 2    50   Output ~ 0
-HotA_Switch
-Text GLabel 10400 2300 2    50   Input ~ 0
-Sold_PWM
-Text GLabel 10400 1800 2    50   Input ~ 0
-Heater_PWM
 Text GLabel 10400 1100 2    50   Output ~ 0
 Main_Switch
 Text GLabel 10400 900  2    50   Output ~ 0
 Main_Enc_A
-Text GLabel 9250 1200 0    50   Input ~ 0
+Text GLabel 9250 1500 0    50   Input ~ 0
 DISP_DC_RS
-Text GLabel 9250 1000 0    50   Input ~ 0
-DISP_CS
-Text GLabel 9250 1300 0    50   Input ~ 0
-DISP_SDI
-Text GLabel 9250 1400 0    50   Input ~ 0
-DISP_SCK
-Text GLabel 9250 1100 0    50   Input ~ 0
-DISP_RST
-Text GLabel 9250 1600 0    50   Input ~ 0
-DISP_T_CLK
 Text GLabel 9250 1700 0    50   Input ~ 0
+DISP_CS
+Text GLabel 9250 1400 0    50   Input ~ 0
+DISP_SDI
+Text GLabel 9250 1300 0    50   Input ~ 0
+DISP_SCK
+Text GLabel 9250 1600 0    50   Input ~ 0
+DISP_RST
+Text GLabel 9250 1100 0    50   Input ~ 0
+DISP_T_CLK
+Text GLabel 9250 1000 0    50   Input ~ 0
 DISP_T_CS
 Text GLabel 9250 1800 0    50   Input ~ 0
 DISP_T_DIN
@@ -1743,9 +1706,9 @@ Text GLabel 9250 1900 0    50   Output ~ 0
 DISP_T_DO
 Text GLabel 9250 2000 0    50   Output ~ 0
 DISP_T_IRQ
-Text GLabel 9250 1500 0    50   Output ~ 0
+Text GLabel 9250 1200 0    50   Output ~ 0
 DISP_SDO
-Text GLabel 9250 2100 0    50   Input ~ 0
+Text GLabel 9250 2400 0    50   Input ~ 0
 SD_CS
 Wire Wire Line
 	10250 2000 10400 2000
@@ -1772,23 +1735,9 @@ Wire Wire Line
 	10250 1100 10400 1100
 Wire Wire Line
 	10250 1200 10400 1200
-Wire Wire Line
-	10250 1300 10400 1300
-Wire Wire Line
-	10250 1400 10400 1400
-Wire Wire Line
-	10250 1500 10400 1500
-Wire Wire Line
-	10250 1600 10400 1600
-Wire Wire Line
-	10250 1700 10400 1700
-Wire Wire Line
-	10250 1800 10400 1800
-Wire Wire Line
-	10250 1900 10400 1900
-Text GLabel 9250 2400 0    50   Input ~ 0
+Text GLabel 9250 2300 0    50   Input ~ 0
 SD_SCK
-Text GLabel 9250 2300 0    50   Output ~ 0
+Text GLabel 9250 2100 0    50   Output ~ 0
 SD_SDO
 $Comp
 L power:+3.3V #PWR037
@@ -1833,14 +1782,10 @@ F 3 "~" H 10050 1700 50  0001 C CNN
 	1    10050 1700
 	-1   0    0    1   
 $EndComp
-Text GLabel 10400 2200 2    50   Output ~ 0
-Iron_Therm_Pos
 Wire Wire Line
 	10250 2100 10400 2100
-Text GLabel 10400 1900 2    50   Input ~ 0
+Text GLabel 10400 1400 2    50   Input ~ 0
 Fan_PWM
-Wire Wire Line
-	10250 2400 11100 2400
 Wire Wire Line
 	10250 2200 10400 2200
 Wire Wire Line
@@ -1883,7 +1828,7 @@ Text GLabel 7600 3750 0    50   UnSpc ~ 0
 STM_UART_RX
 Text GLabel 8650 3750 2    50   UnSpc ~ 0
 ESP32_UART_TX
-Text GLabel 10400 2000 2    50   Input ~ 0
+Text GLabel 10400 1300 2    50   Input ~ 0
 Hot_Air_Reed
 $Comp
 L power:PWR_FLAG #FLG0101
@@ -1936,4 +1881,63 @@ Wire Wire Line
 	1950 2400 1200 2400
 Connection ~ 1950 2400
 NoConn ~ 7350 6000
+Wire Wire Line
+	10250 1900 10400 1900
+Text GLabel 10400 2200 2    50   Output ~ 0
+Iron_Therm_Pos
+Wire Wire Line
+	10250 1800 10400 1800
+Wire Wire Line
+	10250 1700 10400 1700
+Wire Wire Line
+	10250 1600 10400 1600
+Wire Wire Line
+	10250 1500 10400 1500
+Wire Wire Line
+	10250 1400 10400 1400
+Wire Wire Line
+	10250 1300 10400 1300
+Text GLabel 10400 1700 2    50   Output ~ 0
+Sold_Enc_A
+Text GLabel 10400 2300 2    50   Output ~ 0
+Hot_Air_Therm_Pos
+NoConn ~ 6250 5200
+Wire Wire Line
+	7350 5700 7600 5700
+Wire Wire Line
+	6100 5500 6250 5500
+Wire Wire Line
+	7600 5200 7350 5200
+NoConn ~ 6250 5800
+NoConn ~ 6250 5900
+NoConn ~ 6250 5600
+Wire Wire Line
+	7350 4900 7600 4900
+Wire Wire Line
+	7350 5100 7600 5100
+Wire Wire Line
+	7350 5000 7600 5000
+NoConn ~ 6250 6000
+NoConn ~ 7350 4500
+Text GLabel 10400 1800 2    50   Output ~ 0
+HotA_Enc_A
+Text GLabel 10400 1600 2    50   Output ~ 0
+Sold_Enc_B
+Text GLabel 10400 1500 2    50   Output ~ 0
+HotA_Switch
+Text GLabel 10400 2100 2    50   Input ~ 0
+Sold_PWM
+Text GLabel 10400 1900 2    50   Input ~ 0
+Heater_PWM
+Text GLabel 10400 2000 2    50   Output ~ 0
+Sold_Switch
+Wire Wire Line
+	10250 2400 10850 2400
+Wire Wire Line
+	10850 2400 10850 2650
+Wire Wire Line
+	10850 2650 11100 2650
+Wire Wire Line
+	7350 4600 7600 4600
+NoConn ~ 6250 5400
 $EndSCHEMATC
