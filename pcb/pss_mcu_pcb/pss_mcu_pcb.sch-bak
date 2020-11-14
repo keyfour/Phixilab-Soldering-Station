@@ -243,12 +243,6 @@ Wire Wire Line
 	5500 1700 5800 1700
 Wire Wire Line
 	6200 1700 6400 1700
-Text GLabel 5300 2100 0    50   UnSpc ~ 0
-Boot
-Text GLabel 6100 2100 2    50   UnSpc ~ 0
-DISP_T_DO
-Wire Wire Line
-	5300 2100 6100 2100
 Text GLabel 7450 3500 2    50   UnSpc ~ 0
 Main_Enc_B
 $Comp
@@ -1686,33 +1680,33 @@ Text GLabel 10400 1100 2    50   Output ~ 0
 Main_Switch
 Text GLabel 10400 900  2    50   Output ~ 0
 Main_Enc_A
-Text GLabel 9250 1500 0    50   Input ~ 0
+Text GLabel 9250 2200 0    50   Input ~ 0
 DISP_DC_RS
-Text GLabel 9250 1700 0    50   Input ~ 0
-DISP_CS
-Text GLabel 9250 1400 0    50   Input ~ 0
-DISP_SDI
-Text GLabel 9250 1300 0    50   Input ~ 0
-DISP_SCK
-Text GLabel 9250 1600 0    50   Input ~ 0
-DISP_RST
-Text GLabel 9250 1100 0    50   Input ~ 0
-DISP_T_CLK
-Text GLabel 9250 1000 0    50   Input ~ 0
-DISP_T_CS
-Text GLabel 9250 1800 0    50   Input ~ 0
-DISP_T_DIN
-Text GLabel 9250 1900 0    50   Output ~ 0
-DISP_T_DO
-Text GLabel 9250 2000 0    50   Output ~ 0
-DISP_T_IRQ
-Text GLabel 9250 1200 0    50   Output ~ 0
-DISP_SDO
 Text GLabel 9250 2400 0    50   Input ~ 0
+DISP_CS
+Text GLabel 9250 2100 0    50   Input ~ 0
+DISP_SDI
+Text GLabel 9250 2000 0    50   Input ~ 0
+DISP_SCK
+Text GLabel 9250 2300 0    50   Input ~ 0
+DISP_RST
+Text GLabel 9250 1800 0    50   Input ~ 0
+DISP_T_CLK
+Text GLabel 9250 1700 0    50   Input ~ 0
+DISP_T_CS
+Text GLabel 9250 1600 0    50   Input ~ 0
+DISP_T_DIN
+Text GLabel 9250 1500 0    50   Output ~ 0
+DISP_T_DO
+Text GLabel 9250 1400 0    50   Output ~ 0
+DISP_T_IRQ
+Text GLabel 9250 1900 0    50   Output ~ 0
+DISP_SDO
+Text GLabel 9250 1000 0    50   Input ~ 0
 SD_CS
 Wire Wire Line
 	10250 2000 10400 2000
-Text GLabel 9250 2200 0    50   Input ~ 0
+Text GLabel 9250 1200 0    50   Input ~ 0
 SD_SDI
 $Comp
 L power:GND #PWR031
@@ -1735,9 +1729,9 @@ Wire Wire Line
 	10250 1100 10400 1100
 Wire Wire Line
 	10250 1200 10400 1200
-Text GLabel 9250 2300 0    50   Input ~ 0
+Text GLabel 9250 1100 0    50   Input ~ 0
 SD_SCK
-Text GLabel 9250 2100 0    50   Output ~ 0
+Text GLabel 9250 1300 0    50   Output ~ 0
 SD_SDO
 $Comp
 L power:+3.3V #PWR037
@@ -1883,7 +1877,7 @@ Connection ~ 1950 2400
 NoConn ~ 7350 6000
 Wire Wire Line
 	10250 1900 10400 1900
-Text GLabel 10400 2200 2    50   Output ~ 0
+Text GLabel 10400 2300 2    50   Output ~ 0
 Iron_Therm_Pos
 Wire Wire Line
 	10250 1800 10400 1800
@@ -1897,9 +1891,7 @@ Wire Wire Line
 	10250 1400 10400 1400
 Wire Wire Line
 	10250 1300 10400 1300
-Text GLabel 10400 1700 2    50   Output ~ 0
-Sold_Enc_A
-Text GLabel 10400 2300 2    50   Output ~ 0
+Text GLabel 10400 2200 2    50   Output ~ 0
 Hot_Air_Therm_Pos
 NoConn ~ 6250 5200
 Wire Wire Line
@@ -1919,9 +1911,7 @@ Wire Wire Line
 	7350 5000 7600 5000
 NoConn ~ 6250 6000
 NoConn ~ 7350 4500
-Text GLabel 10400 1800 2    50   Output ~ 0
-HotA_Enc_A
-Text GLabel 10400 1600 2    50   Output ~ 0
+Text GLabel 10400 1700 2    50   Output ~ 0
 Sold_Enc_B
 Text GLabel 10400 1500 2    50   Output ~ 0
 HotA_Switch
@@ -1940,4 +1930,8 @@ Wire Wire Line
 Wire Wire Line
 	7350 4600 7600 4600
 NoConn ~ 6250 5400
+Text GLabel 10400 1800 2    50   Output ~ 0
+HotA_Enc_A
+Text GLabel 10400 1600 2    50   Output ~ 0
+Sold_Enc_A
 $EndSCHEMATC
