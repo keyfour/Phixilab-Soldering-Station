@@ -1,4 +1,4 @@
-update=Вс 22 ноя 2020 15:13:44
+update=Вс 29 ноя 2020 21:20:07
 version=1
 last_client=kicad
 [general]
@@ -29,7 +29,7 @@ LastNetListRead=pss_mcu_pcb.net
 CopperLayerCount=4
 BoardThickness=1.6
 AllowMicroVias=0
-AllowBlindVias=1
+AllowBlindVias=0
 RequireCourtyardDefinitions=0
 ProhibitOverlappingCourtyards=1
 MinTrackWidth=0.2
