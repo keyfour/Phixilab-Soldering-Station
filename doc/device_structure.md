@@ -5,10 +5,12 @@
 ## Power Supply
 
 Main power supply is powered with 220v and has output with 24v DC.
-Power button switch on and off main power source. There are two
+Power button switch on and off main power source. There are three
 DC/DC step down converter:
 
-* 24v to 3.3v and 5v to power main PCB.
+* 24v to 12v
+* 12v to 5v
+* 5v to 3v
 
 220v power domain is used for heating element in heat gun.
 
@@ -26,7 +28,7 @@ Every encoder has push button to on/off output or for enter command.
 
 ### Power domains:
 
-* 3.3v is used for encoders and temperature feedback signals,
+* 3.3v is used for encoders and MCUs,
 * 5v is used to power components controls,
 * 24v is used for solder and fan in heat gun,
 * 220v is used for heating element in heat gun.

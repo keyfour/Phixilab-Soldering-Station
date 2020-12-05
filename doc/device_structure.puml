@@ -1,68 +1,111 @@
 @startuml
 
 component "AC-DC Power Supply" as power {
-    node "220V AC -> 24V DC"
+    node "220V AC -> 24V DC" as powers
 }
+
+component "Fuse" as fuse
+
+interface "220v input" as pinput
+
+pinput ---> powers
+
 component "Cooler Fan" as cooller
 component "Antenna" as antenna
 component "Power Button" as button
 
-database "Solder" as solder {
-    component "Thermocouple Solder" as thcSolder
+node "Solder" as solder {
+    component "Thermocouple Solder" as thcSolder #LightBlue
+    component "Heater" as hSolder #LightSalmon
 }
 
-database "Heat Gun" as gun {
-    component "Thermocouple Heat Gun" as thcHeat
+node "Heat Gun" as gun {
+    component "Thermocouple Heat Gun" as thcHeat #LightBlue
+    component "Heater" as hHeat #LightCoral
+    component "Fan" as fHeat #LightSalmon
 }
 
-node "PCB" as interfaces {
-    component "DC-DC Converter 3.3v" as converter3
-    component "DC-DC Converter 5v" as converter5
+node "Main PCB" as interfaces {
 
-    cloud "3.3V DC" as lvdomain {
-        component "LCD Display" as display
-        component "ESP32 Module " as mcu
+    interface "24v input" as vinput24 #LightSalmon
+    interface "220v input" as vinput220 #LightCoral
+
+    component "Voltage Regulators" #LightPink {
+
+        component "DC-DC Converter 24v/5v" as converter5
+    }
+
+    component "Input Controls" as controls #LightGreen {
         component "Encoder Input Temp Solder Iron" as inputTemp
         component "Encoder Input Heat Gun" as inputHeat
         component "Encoder Input Main" as inputMain
-        component "STM32 MCU" as driver
-        component "Amplifier" as amp
     }
-    cloud "5V DC" as lvdomain2
-    cloud "220V AC" as hvdomain
-    cloud "24V DC"  as mvdomain
+
+    component "LCD Display" as display #LightGreen
+
+
+    cloud "220V AC" as hvdomain #LightCoral  {
+        component "Controls" as hvctrls
+    }
+
+    cloud "24V DC"  as mvdomain #LightSalmon {
+        component "Controls" as mvctrls
+    }
+    cloud "5V DC" as lvdomain2 #LightBlue {
+        component "Controls" as lvctrls
+    }
+
+    converter5 -> lvdomain2
+
+    vinput220 --> hvdomain
+    vinput24 --> mvdomain
+    vinput24 -d-> converter5
+
+    mvctrls ..> hSolder
+    mvctrls ..> fHeat
+    hvctrls ..> hHeat
 }
 
-power --> converter3 : 24VDC
-power --> converter5 : 24VDC
-power --> hvdomain : 220VAC
-power --> mvdomain : 24VDC
-converter3 --> lvdomain : 3.3V
-converter5 --> lvdomain2 : 5V
-mvdomain --> cooller : 24V
-mvdomain -down-> solder : 24VDC   
-hvdomain -down-> gun : 220VAC
-mvdomain --> gun : 24V
+node "Processor PCB" as processor {
+    cloud "3.3V DC" as lvdomain #LightCyan {
 
-thcSolder ..> amp : Temperature
-thcHeat ..> amp : Temperature
-amp ..> driver : Temperature
+        component "ESP32 Module " as mcu #Pink
+        component "Driver" as mcud #LightGreen {
+            component "STM32 MCU" as driver
+            component "Amplifier" as amp
+        }
 
-mcu ..> display : UI
+    }
+    component "DC-DC Converter 5v/3.3v" as converter3
+    converter5 -r-> converter3
+    converter3 -r-> lvdomain
+    mcu <..> driver : UART
 
-inputMain ..> mcu : Menu Cntrl
-inputTemp ..> driver : Temperature
-inputHeat ..> driver : Temperature
+    lvctrls .> mvctrls
+    lvctrls .> hvctrls
 
-mcu <...> driver : UART
+    amp .> driver : Temperature
 
-driver ..> hvdomain : 5V Ctnrl\n normal off
-driver ..> mvdomain
+    mcu ..> display : UI
 
-lvdomain2 ..> hvdomain
-lvdomain2 ..>mvdomain
+    inputMain .> mcu : Menu Cntrl
+    inputTemp .> driver : Temperature
+    inputHeat .> driver : Temperature
+    driver ..> lvctrls
+}
 
-mcu <.left.> antenna
+powers ---> vinput24 : 24VDC
+powers ---> cooller
+pinput ---> fuse
+fuse ---> vinput220 : 220VAC
+
+thcSolder ..> amp : Div2
+thcHeat ..> amp : Div2
+
+lvctrls ---> thcHeat
+lvctrls ---> thcSolder
+
+mcu <...> antenna
 
 button ..> power
 
